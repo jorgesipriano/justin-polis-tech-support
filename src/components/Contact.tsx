@@ -21,7 +21,7 @@ const Contact = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
           {/* WhatsApp */}
           <a
-            href="https://wa.me/5531984101104"
+            href="https://wa.me/5531984101104?text=Olá"
             target="_blank"
             rel="noopener noreferrer"
             className="group bg-card rounded-2xl p-6 shadow-card border border-border/50 hover:border-accent/50 hover:shadow-lg transition-all duration-300 text-center"

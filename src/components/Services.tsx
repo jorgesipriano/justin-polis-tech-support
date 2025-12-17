@@ -104,7 +104,7 @@ const Services = () => {
             Não encontrou o serviço que precisa?
           </p>
           <a
-            href="https://wa.me/5531984101104?text=Olá! Preciso de um orçamento para um serviço."
+            href="https://wa.me/5531984101104?text=Olá"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-dark transition-colors"

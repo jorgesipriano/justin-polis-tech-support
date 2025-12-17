@@ -61,7 +61,7 @@ const Coverage = () => {
 
             {/* CTA */}
             <a
-              href="https://wa.me/5531984101104?text=Olá! Gostaria de saber se vocês atendem na minha região."
+              href="https://wa.me/5531984101104?text=Olá"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-6 py-3 rounded-xl font-semibold hover:bg-primary-dark transition-colors"
