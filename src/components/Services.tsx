@@ -1,49 +1,39 @@
 import { 
   WashingMachine, 
   Refrigerator, 
-  Wind, 
-  Microwave, 
-  Tv, 
   Wrench,
-  CheckCircle2
+  CheckCircle2,
+  Star
 } from 'lucide-react';
 
 const services = [
   {
     icon: WashingMachine,
-    title: 'Máquinas de Lavar',
-    description: 'Conserto e manutenção de lavadoras e secadoras de todas as marcas.',
-    features: ['Troca de peças', 'Limpeza interna', 'Manutenção preventiva']
+    title: 'Lavagem de Máquina de Lavar',
+    description: 'Higienização completa e profunda da sua máquina de lavar. Eliminamos sujeiras, bactérias e mau cheiro.',
+    features: ['Limpeza do tambor', 'Higienização completa', 'Eliminação de odores', 'Limpeza do filtro'],
+    highlight: true
   },
   {
     icon: Refrigerator,
-    title: 'Refrigeradores',
-    description: 'Reparo em geladeiras, freezers e refrigeradores side by side.',
-    features: ['Recarga de gás', 'Troca de compressor', 'Vedação']
+    title: 'Conserto de Geladeira',
+    description: 'Reparo especializado em geladeiras, freezers e refrigeradores de todas as marcas e modelos.',
+    features: ['Recarga de gás', 'Troca de compressor', 'Troca de borracha', 'Reparo no motor'],
+    highlight: true
   },
   {
-    icon: Wind,
-    title: 'Ar Condicionado',
-    description: 'Instalação, manutenção e conserto de aparelhos de ar condicionado.',
-    features: ['Instalação', 'Limpeza', 'Recarga de gás']
-  },
-  {
-    icon: Microwave,
-    title: 'Micro-ondas',
-    description: 'Reparo em micro-ondas convencionais e de embutir.',
-    features: ['Troca de magnetron', 'Painel', 'Porta']
-  },
-  {
-    icon: Tv,
-    title: 'TVs e Monitores',
-    description: 'Conserto de televisores LED, LCD, OLED e monitores.',
-    features: ['Tela', 'Placa', 'Fonte']
+    icon: WashingMachine,
+    title: 'Conserto de Máquina de Lavar',
+    description: 'Manutenção e reparo em lavadoras e secadoras. Resolvemos qualquer problema!',
+    features: ['Troca de peças', 'Reparo na placa', 'Troca de rolamentos', 'Manutenção preventiva'],
+    highlight: false
   },
   {
     icon: Wrench,
     title: 'Outros Serviços',
-    description: 'Diversos eletrodomésticos e pequenos reparos.',
-    features: ['Fogões', 'Fornos', 'Cafeteiras']
+    description: 'Também realizamos reparos em outros eletrodomésticos.',
+    features: ['Micro-ondas', 'Fogões', 'Fornos'],
+    highlight: false
   }
 ];
 
@@ -65,16 +55,36 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
           {services.map((service, index) => (
             <div
               key={service.title}
-              className="group bg-card rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 border border-border/50 hover:border-primary/30"
+              className={`group bg-card rounded-2xl p-6 shadow-card hover:shadow-lg transition-all duration-300 border-2 ${
+                service.highlight 
+                  ? 'border-primary/50 hover:border-primary ring-2 ring-primary/20' 
+                  : 'border-border/50 hover:border-primary/30'
+              }`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
+              {/* Highlight Badge */}
+              {service.highlight && (
+                <div className="flex items-center gap-1 text-accent text-sm font-semibold mb-3">
+                  <Star className="w-4 h-4 fill-accent" />
+                  Serviço em Destaque
+                </div>
+              )}
+
               {/* Icon */}
-              <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
-                <service.icon className="w-7 h-7 text-primary group-hover:text-primary-foreground transition-colors duration-300" />
+              <div className={`w-14 h-14 rounded-xl flex items-center justify-center mb-5 group-hover:scale-110 transition-all duration-300 ${
+                service.highlight 
+                  ? 'bg-primary text-primary-foreground' 
+                  : 'bg-primary/10 group-hover:bg-primary'
+              }`}>
+                <service.icon className={`w-7 h-7 transition-colors duration-300 ${
+                  service.highlight 
+                    ? 'text-primary-foreground' 
+                    : 'text-primary group-hover:text-primary-foreground'
+                }`} />
               </div>
 
               {/* Content */}
