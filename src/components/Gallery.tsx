@@ -1,4 +1,4 @@
-import { Camera } from 'lucide-react';
+import { Camera, Video } from 'lucide-react';
 
 const Gallery = () => {
   return (
@@ -10,19 +10,31 @@ const Gallery = () => {
           </h2>
         </div>
 
-        {/* Simple Image Grid - 3 spots */}
+        {/* Media Grid - 3 spots for photos or videos */}
         <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-3xl mx-auto">
-          {[1, 2, 3].map((item) => (
-            <div
-              key={item}
-              className="aspect-square bg-card rounded-xl overflow-hidden shadow-card border border-border/50 flex items-center justify-center"
-            >
-              <div className="text-center p-4">
-                <Camera className="w-8 h-8 text-primary/40 mx-auto mb-2" />
-                <span className="text-xs text-muted-foreground">Foto</span>
-              </div>
+          {/* Slot 1 - Foto */}
+          <div className="aspect-square bg-card rounded-xl overflow-hidden shadow-card border border-border/50 flex items-center justify-center">
+            <div className="text-center p-4">
+              <Camera className="w-8 h-8 text-primary/40 mx-auto mb-2" />
+              <span className="text-xs text-muted-foreground">Foto</span>
             </div>
-          ))}
+          </div>
+
+          {/* Slot 2 - Vídeo */}
+          <div className="aspect-square bg-card rounded-xl overflow-hidden shadow-card border border-border/50 flex items-center justify-center">
+            <div className="text-center p-4">
+              <Video className="w-8 h-8 text-primary/40 mx-auto mb-2" />
+              <span className="text-xs text-muted-foreground">Vídeo</span>
+            </div>
+          </div>
+
+          {/* Slot 3 - Foto */}
+          <div className="aspect-square bg-card rounded-xl overflow-hidden shadow-card border border-border/50 flex items-center justify-center">
+            <div className="text-center p-4">
+              <Camera className="w-8 h-8 text-primary/40 mx-auto mb-2" />
+              <span className="text-xs text-muted-foreground">Foto</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
