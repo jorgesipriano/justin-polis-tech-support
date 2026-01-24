@@ -4,18 +4,31 @@ const Services = () => {
   return (
     <section id="servicos" className="py-16 bg-background">
       <div className="container mx-auto px-4">
+        {/* Section Header */}
+        <div className="text-center mb-12">
+          <h2 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-4">
+            Nossos Serviços
+          </h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Com <span className="text-primary font-bold">35 anos de experiência</span>, somos especialistas em manutenção e conserto de eletrodomésticos
+          </p>
+        </div>
+
         {/* Two Main Services - Big Cards */}
         <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
-          {/* Lavagem */}
+          {/* Lava e Seca */}
           <div className="group bg-card rounded-3xl p-8 shadow-card border-2 border-primary/30 hover:border-primary hover:shadow-lg transition-all duration-300">
             <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-6">
               <WashingMachine className="w-8 h-8 text-primary-foreground" />
             </div>
             <h3 className="font-display text-2xl font-bold text-foreground mb-3">
-              Lavagem de Máquina
+              Lava e Seca
             </h3>
-            <p className="text-muted-foreground text-lg">
-              Higienização completa. Elimina sujeira, bactérias e mau cheiro.
+            <p className="text-muted-foreground text-lg mb-4">
+              Manutenção preventiva e corretiva. Higienização completa que elimina sujeira, bactérias e mau cheiro.
+            </p>
+            <p className="text-sm text-primary font-semibold">
+              ✓ Todas as marcas e modelos
             </p>
           </div>
 
@@ -25,10 +38,13 @@ const Services = () => {
               <Refrigerator className="w-8 h-8 text-accent-foreground" />
             </div>
             <h3 className="font-display text-2xl font-bold text-foreground mb-3">
-              Conserto de Geladeira
+              Geladeira e Freezer
             </h3>
-            <p className="text-muted-foreground text-lg">
-              Reparo especializado. Todas as marcas e modelos.
+            <p className="text-muted-foreground text-lg mb-4">
+              Reparo especializado com diagnóstico preciso. Resolvemos problemas de refrigeração, vazamentos e ruídos.
+            </p>
+            <p className="text-sm text-accent font-semibold">
+              ✓ Todas as marcas e modelos
             </p>
           </div>
         </div>

@@ -15,14 +15,24 @@ const Hero = () => {
             />
           </div>
 
+          {/* Badge de Experiência */}
+          <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 px-4 py-2 rounded-full mb-6">
+            <span className="text-accent font-bold text-lg">35 ANOS</span>
+            <span className="text-primary-foreground/90">de experiência</span>
+          </div>
+
           {/* Main Message - Bold & Direct */}
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold leading-none mb-6 tracking-tight">
             SEU CONSERTO
             <span className="block text-accent">ESTÁ AQUI.</span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-10 font-medium">
-            Lavagem de Máquina · Conserto de Geladeira
+          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-6 font-medium">
+            Especialista em <span className="text-accent font-bold">Lava e Seca</span> e <span className="text-accent font-bold">Geladeiras</span>
+          </p>
+          
+          <p className="text-lg text-primary-foreground/70 mb-10">
+            Todas as marcas · Orçamento sem compromisso
           </p>
 
           {/* CTA Button - Big & Bold */}
