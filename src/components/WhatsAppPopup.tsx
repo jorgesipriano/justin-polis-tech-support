@@ -41,16 +41,16 @@ const WhatsAppPopup = () => {
             <MessageCircle className="w-10 h-10 text-white" />
           </div>
 
-          <h3 className="font-display text-2xl font-bold text-foreground mb-3">
+          <h3 className="font-display text-2xl font-bold text-foreground mb-2">
             Precisa de ajuda?
           </h3>
 
-          <p className="text-muted-foreground mb-2">
-            <span className="font-bold text-primary">35 anos de experiência</span> em conserto de Lava e Seca e Geladeiras.
+          <p className="text-primary font-bold text-lg mb-2">
+            SERVIBEL está em todos os lares!
           </p>
 
           <p className="text-muted-foreground mb-6">
-            Fale agora com um especialista!
+            Nos chame para entender seu caso e resolver seu problema rapidamente.
           </p>
 
           <a
