@@ -23,8 +23,8 @@ const Hero = () => {
 
           {/* Main Message - Bold & Direct */}
           <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-extrabold leading-none mb-6 tracking-tight">
-            SEU CONSERTO
-            <span className="block text-accent">ESTÁ AQUI.</span>
+            PRESENTE EM
+            <span className="block text-accent">TODOS OS LARES</span>
           </h1>
 
           <p className="text-xl md:text-2xl text-primary-foreground/90 mb-6 font-medium">
