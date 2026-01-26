@@ -3,11 +3,12 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
-import { LogOut, Building2, BarChart3, Image, Users } from 'lucide-react';
+import { LogOut, Building2, BarChart3, Image, Users, KeyRound } from 'lucide-react';
 import BusinessInfoTab from '@/components/admin/BusinessInfoTab';
 import AdvisoryResultsTab from '@/components/admin/AdvisoryResultsTab';
 import GalleryTab from '@/components/admin/GalleryTab';
 import UsersTab from '@/components/admin/UsersTab';
+import CredentialsTab from '@/components/admin/CredentialsTab';
 
 const Admin = () => {
   const { user, isAdmin, isOwner, loading, signOut } = useAuth();
@@ -55,7 +56,7 @@ const Admin = () => {
       {/* Main Content */}
       <main className="container mx-auto px-4 py-6">
         <Tabs defaultValue="business" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-2 md:grid-cols-4 h-auto">
+          <TabsList className="grid w-full grid-cols-3 md:grid-cols-5 h-auto">
             <TabsTrigger value="business" className="flex items-center gap-2 py-3">
               <Building2 className="w-4 h-4" />
               <span className="hidden sm:inline">Negócio</span>
@@ -67,6 +68,10 @@ const Admin = () => {
             <TabsTrigger value="gallery" className="flex items-center gap-2 py-3">
               <Image className="w-4 h-4" />
               <span className="hidden sm:inline">Galeria</span>
+            </TabsTrigger>
+            <TabsTrigger value="credentials" className="flex items-center gap-2 py-3">
+              <KeyRound className="w-4 h-4" />
+              <span className="hidden sm:inline">Senhas</span>
             </TabsTrigger>
             {isOwner && (
               <TabsTrigger value="users" className="flex items-center gap-2 py-3">
@@ -86,6 +91,10 @@ const Admin = () => {
 
           <TabsContent value="gallery">
             <GalleryTab />
+          </TabsContent>
+
+          <TabsContent value="credentials">
+            <CredentialsTab />
           </TabsContent>
 
           {isOwner && (
