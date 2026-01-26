@@ -95,6 +95,42 @@ export type Database = {
         }
         Relationships: []
       }
+      client_credentials: {
+        Row: {
+          created_at: string
+          created_by: string | null
+          id: string
+          login_username: string
+          notes: string | null
+          password: string
+          service_name: string
+          updated_at: string
+          url: string | null
+        }
+        Insert: {
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          login_username: string
+          notes?: string | null
+          password: string
+          service_name: string
+          updated_at?: string
+          url?: string | null
+        }
+        Update: {
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          login_username?: string
+          notes?: string | null
+          password?: string
+          service_name?: string
+          updated_at?: string
+          url?: string | null
+        }
+        Relationships: []
+      }
       gallery_images: {
         Row: {
           caption: string | null
