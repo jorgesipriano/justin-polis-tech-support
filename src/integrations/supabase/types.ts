@@ -164,6 +164,39 @@ export type Database = {
         }
         Relationships: []
       }
+      project_notes: {
+        Row: {
+          color: string | null
+          content: string
+          created_at: string
+          created_by: string | null
+          id: string
+          is_pinned: boolean | null
+          title: string | null
+          updated_at: string
+        }
+        Insert: {
+          color?: string | null
+          content: string
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          is_pinned?: boolean | null
+          title?: string | null
+          updated_at?: string
+        }
+        Update: {
+          color?: string | null
+          content?: string
+          created_at?: string
+          created_by?: string | null
+          id?: string
+          is_pinned?: boolean | null
+          title?: string | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
       user_roles: {
         Row: {
           created_at: string
