@@ -36,14 +36,14 @@ const Gallery = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
-          <div className="aspect-[4/3] bg-card rounded-xl overflow-hidden shadow-card border border-border/50">
+          <div className="aspect-[3/4] bg-card rounded-xl overflow-hidden shadow-card border border-border/50">
             <img
               src="/images/servibel-fachada.jpg"
               alt="Fachada da Servibel Assistência Técnica"
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="aspect-[4/3] bg-card rounded-xl overflow-hidden shadow-card border border-border/50">
+          <div className="aspect-[3/4] bg-card rounded-xl overflow-hidden shadow-card border border-border/50">
             <img
               src="/images/servibel-oficina.jpg"
               alt="Oficina da Servibel com equipamentos e peças"
@@ -52,7 +52,7 @@ const Gallery = () => {
           </div>
 
           {items.map((item) => (
-            <div key={item.id} className="relative aspect-[4/3] bg-card rounded-xl overflow-hidden shadow-card border border-border/50">
+            <div key={item.id} className="relative aspect-[3/4] bg-card rounded-xl overflow-hidden shadow-card border border-border/50">
               {isVideo(item.file_url) ? (
                 <>
                   <video
