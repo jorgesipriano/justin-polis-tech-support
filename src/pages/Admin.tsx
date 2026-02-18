@@ -3,13 +3,14 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/contexts/AuthContext';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
-import { LogOut, Building2, BarChart3, Image, Users, KeyRound, StickyNote } from 'lucide-react';
+import { LogOut, Building2, BarChart3, Image, Users, KeyRound, StickyNote, Wallet } from 'lucide-react';
 import BusinessInfoTab from '@/components/admin/BusinessInfoTab';
 import AdvisoryResultsTab from '@/components/admin/AdvisoryResultsTab';
 import GalleryTab from '@/components/admin/GalleryTab';
 import UsersTab from '@/components/admin/UsersTab';
 import CredentialsTab from '@/components/admin/CredentialsTab';
 import NotesTab from '@/components/admin/NotesTab';
+import FinancialTab from '@/components/admin/FinancialTab';
 
 const Admin = () => {
   const { user, isAdmin, isOwner, loading, signOut } = useAuth();
@@ -57,10 +58,14 @@ const Admin = () => {
       {/* Main Content */}
       <main className="container mx-auto px-4 py-6">
         <Tabs defaultValue="business" className="space-y-6">
-          <TabsList className="grid w-full grid-cols-3 md:grid-cols-6 h-auto">
+          <TabsList className="grid w-full grid-cols-4 md:grid-cols-7 h-auto">
             <TabsTrigger value="business" className="flex items-center gap-2 py-3">
               <Building2 className="w-4 h-4" />
               <span className="hidden sm:inline">Negócio</span>
+            </TabsTrigger>
+            <TabsTrigger value="financial" className="flex items-center gap-2 py-3">
+              <Wallet className="w-4 h-4" />
+              <span className="hidden sm:inline">Financeiro</span>
             </TabsTrigger>
             <TabsTrigger value="results" className="flex items-center gap-2 py-3">
               <BarChart3 className="w-4 h-4" />
@@ -88,6 +93,10 @@ const Admin = () => {
 
           <TabsContent value="business">
             <BusinessInfoTab />
+          </TabsContent>
+
+          <TabsContent value="financial">
+            <FinancialTab />
           </TabsContent>
 
           <TabsContent value="results">
