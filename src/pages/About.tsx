@@ -1,4 +1,4 @@
-import { ArrowLeft, Phone, Clock, MapPin, Wrench, Shield, Award, Users, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Phone, Clock, MapPin, Wrench, Shield, Award, Users, CheckCircle, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '@/assets/logo-servibel.jpeg';
 
@@ -132,9 +132,9 @@ const About = () => {
               href="https://wa.me/5531984101104?text=Olá"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 hover:opacity-90 transition-all duration-300 shadow-lg"
+              className="inline-flex items-center gap-3 bg-green-600 text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 hover:bg-green-700 transition-all duration-300 shadow-lg"
             >
-              <Phone className="w-5 h-5" />
+              <MessageCircle className="w-5 h-5" />
               Clique Aqui e Chame no WhatsApp
             </a>
           </div>
