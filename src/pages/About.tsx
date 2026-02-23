@@ -126,6 +126,18 @@ const About = () => {
               </div>
             ))}
           </div>
+
+          <div className="flex justify-center mt-12">
+            <a
+              href="https://wa.me/5531984101104?text=Olá"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 hover:opacity-90 transition-all duration-300 shadow-lg"
+            >
+              <Phone className="w-5 h-5" />
+              Clique Aqui e Chame no WhatsApp
+            </a>
+          </div>
         </div>
       </section>
 
