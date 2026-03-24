@@ -25,7 +25,10 @@ const App = () => (
             <Route path="/page" element={<About />} />
             <Route path="/admin" element={<Admin />} />
             <Route path="/admin/login" element={<AdminLogin />} />
-            <Route path="/:slug" element={<ServiceLanding />} />
+            <Route path="/reparo-maquina-lavar-belo-horizonte" element={<ServiceLanding />} />
+            <Route path="/reparo-geladeira-justinopolis" element={<ServiceLanding />} />
+            <Route path="/reparo-lava-e-seca" element={<ServiceLanding />} />
+            <Route path="/limpa-lava-e-seca" element={<ServiceLanding />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
