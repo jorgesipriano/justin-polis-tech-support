@@ -68,9 +68,15 @@ const benefits = [
 ];
 
 const ServiceLanding = () => {
-  const { slug } = useParams<{ slug: string }>();
+  const location = useLocation();
+  const slug = location.pathname.replace('/', '');
   const [showCoupon, setShowCoupon] = useState(false);
   const config = slug ? serviceConfigs[slug] : null;
+
+  useEffect(() => {
+    const timer = setTimeout(() => setShowCoupon(true), 1500);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const timer = setTimeout(() => setShowCoupon(true), 1500);
