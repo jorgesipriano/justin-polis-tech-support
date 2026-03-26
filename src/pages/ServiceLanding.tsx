@@ -122,8 +122,91 @@ const ServiceLanding = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  // GTM específico para limpa-lava-e-seca (GTM-W7X24QV7)
+  // Dynamic SEO meta tags & JSON-LD
   useEffect(() => {
+    if (!config) return;
+
+    document.title = config.metaTitle;
+
+    const setMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? 'property' : 'name';
+      let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement;
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute(attr, name);
+        document.head.appendChild(el);
+      }
+      el.content = content;
+    };
+
+    setMeta('description', config.metaDescription);
+    setMeta('keywords', config.keywords.join(', '));
+    setMeta('og:title', config.metaTitle, true);
+    setMeta('og:description', config.metaDescription, true);
+    setMeta('og:type', 'website', true);
+    setMeta('og:url', `https://servibel.com.br/${config.slug}`, true);
+
+    // Set canonical
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = `https://servibel.com.br/${config.slug}`;
+
+    // JSON-LD structured data
+    const jsonLd = document.createElement('script');
+    jsonLd.type = 'application/ld+json';
+    jsonLd.id = 'service-jsonld';
+    jsonLd.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'SERVIBEL - Assistência Técnica e Peças',
+      description: config.metaDescription,
+      url: `https://servibel.com.br/${config.slug}`,
+      telephone: '+5531984101104',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: config.location || 'Belo Horizonte',
+        addressRegion: 'MG',
+        addressCountry: 'BR',
+      },
+      areaServed: config.location || 'Belo Horizonte e Região Metropolitana',
+      priceRange: '$$',
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.8',
+        reviewCount: '247',
+      },
+    });
+    document.head.appendChild(jsonLd);
+
+    // FAQ structured data
+    const faqLd = document.createElement('script');
+    faqLd.type = 'application/ld+json';
+    faqLd.id = 'faq-jsonld';
+    faqLd.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: config.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    });
+    document.head.appendChild(faqLd);
+
+    return () => {
+      document.getElementById('service-jsonld')?.remove();
+      document.getElementById('faq-jsonld')?.remove();
+    };
+  }, [config]);
+
+
     if (slug !== 'limpa-lava-e-seca') return;
 
     // Inject GTM script
