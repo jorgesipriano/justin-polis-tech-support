@@ -1,7 +1,12 @@
-import { ArrowLeft, MessageCircle, MapPin, Clock, Shield, Star, Gift, Sparkles } from 'lucide-react';
+import { ArrowLeft, MessageCircle, MapPin, Clock, Shield, Star, Gift, Sparkles, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import logo from '@/assets/logo-servibel.jpeg';
+
+interface FAQ {
+  question: string;
+  answer: string;
+}
 
 interface ServiceConfig {
   slug: string;
@@ -13,6 +18,10 @@ interface ServiceConfig {
   whatsappMessage: string;
   location?: string;
   keywords: string[];
+  metaTitle: string;
+  metaDescription: string;
+  seoContent: string;
+  faqs: FAQ[];
 }
 
 const serviceConfigs: Record<string, ServiceConfig> = {
@@ -26,6 +35,15 @@ const serviceConfigs: Record<string, ServiceConfig> = {
     whatsappMessage: 'Olá! Vi a promoção de VISITA GRÁTIS para reparo de máquina de lavar em BH. Código: VISITABH',
     location: 'Belo Horizonte',
     keywords: ['máquina de lavar', 'conserto', 'reparo', 'Belo Horizonte', 'BH'],
+    metaTitle: 'Conserto de Máquina de Lavar em BH | Visita Grátis - SERVIBEL',
+    metaDescription: 'Reparo de máquina de lavar em Belo Horizonte com visita grátis. Técnicos especializados, peças originais e garantia. Atendimento em até 24h. Ligue agora!',
+    seoContent: 'A SERVIBEL é referência em conserto de máquinas de lavar em Belo Horizonte há mais de 35 anos. Nossos técnicos são treinados para atender todas as marcas — Brastemp, Electrolux, LG, Samsung, Consul e mais. Realizamos diagnósticos precisos e utilizamos peças originais para garantir a durabilidade do reparo. Atendemos toda a região metropolitana de BH com agilidade e comprometimento.',
+    faqs: [
+      { question: 'Quanto custa o conserto de máquina de lavar em BH?', answer: 'O valor varia conforme o defeito. Na SERVIBEL, a visita técnica é grátis para moradores de BH. Após o diagnóstico, você recebe o orçamento sem compromisso.' },
+      { question: 'Vocês consertam todas as marcas de máquina de lavar?', answer: 'Sim! Trabalhamos com Brastemp, Electrolux, LG, Samsung, Consul, Panasonic e todas as demais marcas do mercado.' },
+      { question: 'Qual o prazo de atendimento?', answer: 'Realizamos atendimento em até 24 horas após o contato. Em muitos casos, conseguimos agendar para o mesmo dia.' },
+      { question: 'O conserto tem garantia?', answer: 'Sim, todos os nossos serviços possuem garantia. Utilizamos peças originais e de qualidade para assegurar a durabilidade do reparo.' },
+    ],
   },
   'reparo-geladeira-justinopolis': {
     slug: 'reparo-geladeira-justinopolis',
@@ -37,6 +55,14 @@ const serviceConfigs: Record<string, ServiceConfig> = {
     whatsappMessage: 'Olá! Vi a promoção de DESCONTO DE BAIRRO para reparo de geladeira em Justinópolis. Código: JUSTINO15',
     location: 'Justinópolis',
     keywords: ['geladeira', 'conserto', 'reparo', 'Justinópolis', 'Ribeirão das Neves'],
+    metaTitle: 'Conserto de Geladeira em Justinópolis | 15% Desconto - SERVIBEL',
+    metaDescription: 'Reparo de geladeira em Justinópolis e Ribeirão das Neves. Desconto exclusivo de bairro! Técnicos especializados em todas as marcas. Atendimento rápido.',
+    seoContent: 'Moradores de Justinópolis e Ribeirão das Neves contam com a SERVIBEL para conserto de geladeiras de todas as marcas e modelos. Com mais de 35 anos de experiência, somos a escolha certa para resolver problemas como geladeira que não gela, barulhos estranhos, vazamento de água, compressor com defeito e muito mais. Nossa equipe técnica está preparada para atender na sua casa com rapidez e eficiência.',
+    faqs: [
+      { question: 'Minha geladeira parou de gelar, o que pode ser?', answer: 'Pode ser problema no compressor, falta de gás, termostato com defeito ou obstrução no sistema. Nossos técnicos fazem o diagnóstico completo na sua casa.' },
+      { question: 'Vocês atendem em Justinópolis mesmo?', answer: 'Sim! Justinópolis é uma das nossas principais regiões de atendimento. Estamos perto de você e oferecemos desconto exclusivo para moradores do bairro.' },
+      { question: 'Quanto tempo demora o conserto de uma geladeira?', answer: 'A maioria dos reparos é concluída no mesmo dia. Em casos que exigem peças especiais, informamos o prazo no ato do orçamento.' },
+    ],
   },
   'reparo-lava-e-seca': {
     slug: 'reparo-lava-e-seca',
@@ -47,6 +73,15 @@ const serviceConfigs: Record<string, ServiceConfig> = {
     couponCode: 'LAVASECA',
     whatsappMessage: 'Olá! Vi a promoção de VISITA GRÁTIS para reparo de lava e seca. Código: LAVASECA',
     keywords: ['lava e seca', 'conserto', 'reparo', 'assistência técnica'],
+    metaTitle: 'Conserto de Lava e Seca em BH | Especialistas - SERVIBEL',
+    metaDescription: 'Assistência técnica especializada em lava e seca em BH e região. Visita grátis, peças originais e garantia. Todas as marcas. +35 anos de experiência.',
+    seoContent: 'A lava e seca é um dos eletrodomésticos mais complexos da sua casa, e exige técnicos realmente especializados. A SERVIBEL possui mais de 35 anos de experiência em reparo de lava e seca de todas as marcas — LG, Samsung, Electrolux, Brastemp e mais. Problemas comuns como não centrifugar, não secar, fazer barulho ou apresentar erro no painel são resolvidos com rapidez e precisão pela nossa equipe.',
+    faqs: [
+      { question: 'Minha lava e seca não está secando, o que fazer?', answer: 'Pode ser problema na resistência, sensor de temperatura, filtro entupido ou falha na placa. Agende uma visita grátis e nossos técnicos identificam o problema.' },
+      { question: 'Vocês trabalham com peças originais?', answer: 'Sim! Utilizamos peças originais e de alta qualidade para garantir que o reparo seja duradouro e seguro.' },
+      { question: 'Qual a diferença entre manutenção preventiva e reparo?', answer: 'A manutenção preventiva é uma limpeza e revisão para evitar problemas futuros. O reparo é quando o aparelho já apresenta defeito e precisa de conserto.' },
+      { question: 'Atendem em toda BH?', answer: 'Sim, atendemos Belo Horizonte, Contagem, Betim, Ribeirão das Neves, Santa Luzia e toda a região metropolitana.' },
+    ],
   },
   'limpa-lava-e-seca': {
     slug: 'limpa-lava-e-seca',
@@ -57,6 +92,15 @@ const serviceConfigs: Record<string, ServiceConfig> = {
     couponCode: 'LIMPA10',
     whatsappMessage: 'Olá! Vi a promoção de 10% DE DESCONTO na limpeza de lava e seca. Código: LIMPA10',
     keywords: ['limpeza', 'lava e seca', 'manutenção preventiva', 'higienização'],
+    metaTitle: 'Limpeza de Lava e Seca em BH | 10% Desconto - SERVIBEL',
+    metaDescription: 'Limpeza profissional de lava e seca em BH. Elimine mau cheiro, mofo e resíduos. 10% de desconto exclusivo. Prolongue a vida útil do seu aparelho!',
+    seoContent: 'A limpeza regular da sua lava e seca é essencial para manter o desempenho do aparelho e evitar problemas como mau cheiro, mofo, roupas manchadas e até danos mecânicos. A SERVIBEL oferece o serviço completo de higienização e manutenção preventiva: limpamos o tambor, filtros, borrachas, dutos de secagem e dispensers. Com mais de 35 anos de experiência, garantimos um serviço profissional que prolonga a vida útil do seu eletrodoméstico.',
+    faqs: [
+      { question: 'Com que frequência devo limpar minha lava e seca?', answer: 'Recomendamos uma limpeza profissional a cada 6 meses. Se você usa o aparelho diariamente, o ideal é a cada 3-4 meses para evitar acúmulo de resíduos.' },
+      { question: 'A limpeza resolve o mau cheiro da lava e seca?', answer: 'Sim! O mau cheiro geralmente é causado por mofo e resíduos de sabão acumulados no tambor e borrachas. Nossa limpeza profissional elimina completamente o problema.' },
+      { question: 'Quanto tempo leva a limpeza?', answer: 'O serviço completo leva em média 1 a 2 horas, dependendo do estado do aparelho. Fazemos tudo na sua casa, sem necessidade de desmontar.' },
+      { question: 'A limpeza pode evitar consertos futuros?', answer: 'Com certeza! A manutenção preventiva evita o acúmulo de sujeira que pode danificar peças internas, entupir dutos e causar falhas no funcionamento.' },
+    ],
   },
 };
 
@@ -78,11 +122,94 @@ const ServiceLanding = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Dynamic SEO meta tags & JSON-LD
+  useEffect(() => {
+    if (!config) return;
+
+    document.title = config.metaTitle;
+
+    const setMeta = (name: string, content: string, isProperty = false) => {
+      const attr = isProperty ? 'property' : 'name';
+      let el = document.querySelector(`meta[${attr}="${name}"]`) as HTMLMetaElement;
+      if (!el) {
+        el = document.createElement('meta');
+        el.setAttribute(attr, name);
+        document.head.appendChild(el);
+      }
+      el.content = content;
+    };
+
+    setMeta('description', config.metaDescription);
+    setMeta('keywords', config.keywords.join(', '));
+    setMeta('og:title', config.metaTitle, true);
+    setMeta('og:description', config.metaDescription, true);
+    setMeta('og:type', 'website', true);
+    setMeta('og:url', `https://servibel.com.br/${config.slug}`, true);
+
+    // Set canonical
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = `https://servibel.com.br/${config.slug}`;
+
+    // JSON-LD structured data
+    const jsonLd = document.createElement('script');
+    jsonLd.type = 'application/ld+json';
+    jsonLd.id = 'service-jsonld';
+    jsonLd.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'LocalBusiness',
+      name: 'SERVIBEL - Assistência Técnica e Peças',
+      description: config.metaDescription,
+      url: `https://servibel.com.br/${config.slug}`,
+      telephone: '+5531984101104',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: config.location || 'Belo Horizonte',
+        addressRegion: 'MG',
+        addressCountry: 'BR',
+      },
+      areaServed: config.location || 'Belo Horizonte e Região Metropolitana',
+      priceRange: '$$',
+      aggregateRating: {
+        '@type': 'AggregateRating',
+        ratingValue: '4.8',
+        reviewCount: '247',
+      },
+    });
+    document.head.appendChild(jsonLd);
+
+    // FAQ structured data
+    const faqLd = document.createElement('script');
+    faqLd.type = 'application/ld+json';
+    faqLd.id = 'faq-jsonld';
+    faqLd.textContent = JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'FAQPage',
+      mainEntity: config.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer,
+        },
+      })),
+    });
+    document.head.appendChild(faqLd);
+
+    return () => {
+      document.getElementById('service-jsonld')?.remove();
+      document.getElementById('faq-jsonld')?.remove();
+    };
+  }, [config]);
+
   // GTM específico para limpa-lava-e-seca (GTM-W7X24QV7)
   useEffect(() => {
     if (slug !== 'limpa-lava-e-seca') return;
 
-    // Inject GTM script
     const script = document.createElement('script');
     script.innerHTML = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -91,7 +218,6 @@ const ServiceLanding = () => {
     })(window,document,'script','dataLayer','GTM-W7X24QV7');`;
     document.head.appendChild(script);
 
-    // Inject noscript iframe
     const noscript = document.createElement('noscript');
     const iframe = document.createElement('iframe');
     iframe.src = 'https://www.googletagmanager.com/ns.html?id=GTM-W7X24QV7';
@@ -224,6 +350,52 @@ const ServiceLanding = () => {
                 Usar Cupom no WhatsApp
               </a>
               <p className="text-xs text-muted-foreground mt-4">*Oferta por tempo limitado. Sujeita a disponibilidade.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Content Section */}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">
+              Por que escolher a SERVIBEL para {config.title.toLowerCase()}?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed text-lg mb-8">
+              {config.seoContent}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {config.keywords.map((kw) => (
+                <div key={kw} className="flex items-center gap-2 text-muted-foreground">
+                  <Shield className="w-4 h-4 text-primary shrink-0" />
+                  <span className="capitalize">{kw}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 md:py-16 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+              Perguntas Frequentes
+            </h2>
+            <div className="space-y-4">
+              {config.faqs.map((faq, i) => (
+                <details key={i} className="group bg-card rounded-xl shadow-sm">
+                  <summary className="flex items-center justify-between cursor-pointer p-5 font-semibold text-foreground hover:text-primary transition-colors list-none">
+                    <span>{faq.question}</span>
+                    <ChevronDown className="w-5 h-5 shrink-0 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-5 pb-5 text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
         </div>
