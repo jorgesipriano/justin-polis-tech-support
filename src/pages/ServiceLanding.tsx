@@ -3,6 +3,11 @@ import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import logo from '@/assets/logo-servibel.jpeg';
 
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
 interface ServiceConfig {
   slug: string;
   title: string;
@@ -13,6 +18,10 @@ interface ServiceConfig {
   whatsappMessage: string;
   location?: string;
   keywords: string[];
+  metaTitle: string;
+  metaDescription: string;
+  seoContent: string;
+  faqs: FAQ[];
 }
 
 const serviceConfigs: Record<string, ServiceConfig> = {
@@ -26,6 +35,15 @@ const serviceConfigs: Record<string, ServiceConfig> = {
     whatsappMessage: 'Olá! Vi a promoção de VISITA GRÁTIS para reparo de máquina de lavar em BH. Código: VISITABH',
     location: 'Belo Horizonte',
     keywords: ['máquina de lavar', 'conserto', 'reparo', 'Belo Horizonte', 'BH'],
+    metaTitle: 'Conserto de Máquina de Lavar em BH | Visita Grátis - SERVIBEL',
+    metaDescription: 'Reparo de máquina de lavar em Belo Horizonte com visita grátis. Técnicos especializados, peças originais e garantia. Atendimento em até 24h. Ligue agora!',
+    seoContent: 'A SERVIBEL é referência em conserto de máquinas de lavar em Belo Horizonte há mais de 35 anos. Nossos técnicos são treinados para atender todas as marcas — Brastemp, Electrolux, LG, Samsung, Consul e mais. Realizamos diagnósticos precisos e utilizamos peças originais para garantir a durabilidade do reparo. Atendemos toda a região metropolitana de BH com agilidade e comprometimento.',
+    faqs: [
+      { question: 'Quanto custa o conserto de máquina de lavar em BH?', answer: 'O valor varia conforme o defeito. Na SERVIBEL, a visita técnica é grátis para moradores de BH. Após o diagnóstico, você recebe o orçamento sem compromisso.' },
+      { question: 'Vocês consertam todas as marcas de máquina de lavar?', answer: 'Sim! Trabalhamos com Brastemp, Electrolux, LG, Samsung, Consul, Panasonic e todas as demais marcas do mercado.' },
+      { question: 'Qual o prazo de atendimento?', answer: 'Realizamos atendimento em até 24 horas após o contato. Em muitos casos, conseguimos agendar para o mesmo dia.' },
+      { question: 'O conserto tem garantia?', answer: 'Sim, todos os nossos serviços possuem garantia. Utilizamos peças originais e de qualidade para assegurar a durabilidade do reparo.' },
+    ],
   },
   'reparo-geladeira-justinopolis': {
     slug: 'reparo-geladeira-justinopolis',
@@ -37,6 +55,14 @@ const serviceConfigs: Record<string, ServiceConfig> = {
     whatsappMessage: 'Olá! Vi a promoção de DESCONTO DE BAIRRO para reparo de geladeira em Justinópolis. Código: JUSTINO15',
     location: 'Justinópolis',
     keywords: ['geladeira', 'conserto', 'reparo', 'Justinópolis', 'Ribeirão das Neves'],
+    metaTitle: 'Conserto de Geladeira em Justinópolis | 15% Desconto - SERVIBEL',
+    metaDescription: 'Reparo de geladeira em Justinópolis e Ribeirão das Neves. Desconto exclusivo de bairro! Técnicos especializados em todas as marcas. Atendimento rápido.',
+    seoContent: 'Moradores de Justinópolis e Ribeirão das Neves contam com a SERVIBEL para conserto de geladeiras de todas as marcas e modelos. Com mais de 35 anos de experiência, somos a escolha certa para resolver problemas como geladeira que não gela, barulhos estranhos, vazamento de água, compressor com defeito e muito mais. Nossa equipe técnica está preparada para atender na sua casa com rapidez e eficiência.',
+    faqs: [
+      { question: 'Minha geladeira parou de gelar, o que pode ser?', answer: 'Pode ser problema no compressor, falta de gás, termostato com defeito ou obstrução no sistema. Nossos técnicos fazem o diagnóstico completo na sua casa.' },
+      { question: 'Vocês atendem em Justinópolis mesmo?', answer: 'Sim! Justinópolis é uma das nossas principais regiões de atendimento. Estamos perto de você e oferecemos desconto exclusivo para moradores do bairro.' },
+      { question: 'Quanto tempo demora o conserto de uma geladeira?', answer: 'A maioria dos reparos é concluída no mesmo dia. Em casos que exigem peças especiais, informamos o prazo no ato do orçamento.' },
+    ],
   },
   'reparo-lava-e-seca': {
     slug: 'reparo-lava-e-seca',
@@ -47,6 +73,15 @@ const serviceConfigs: Record<string, ServiceConfig> = {
     couponCode: 'LAVASECA',
     whatsappMessage: 'Olá! Vi a promoção de VISITA GRÁTIS para reparo de lava e seca. Código: LAVASECA',
     keywords: ['lava e seca', 'conserto', 'reparo', 'assistência técnica'],
+    metaTitle: 'Conserto de Lava e Seca em BH | Especialistas - SERVIBEL',
+    metaDescription: 'Assistência técnica especializada em lava e seca em BH e região. Visita grátis, peças originais e garantia. Todas as marcas. +35 anos de experiência.',
+    seoContent: 'A lava e seca é um dos eletrodomésticos mais complexos da sua casa, e exige técnicos realmente especializados. A SERVIBEL possui mais de 35 anos de experiência em reparo de lava e seca de todas as marcas — LG, Samsung, Electrolux, Brastemp e mais. Problemas comuns como não centrifugar, não secar, fazer barulho ou apresentar erro no painel são resolvidos com rapidez e precisão pela nossa equipe.',
+    faqs: [
+      { question: 'Minha lava e seca não está secando, o que fazer?', answer: 'Pode ser problema na resistência, sensor de temperatura, filtro entupido ou falha na placa. Agende uma visita grátis e nossos técnicos identificam o problema.' },
+      { question: 'Vocês trabalham com peças originais?', answer: 'Sim! Utilizamos peças originais e de alta qualidade para garantir que o reparo seja duradouro e seguro.' },
+      { question: 'Qual a diferença entre manutenção preventiva e reparo?', answer: 'A manutenção preventiva é uma limpeza e revisão para evitar problemas futuros. O reparo é quando o aparelho já apresenta defeito e precisa de conserto.' },
+      { question: 'Atendem em toda BH?', answer: 'Sim, atendemos Belo Horizonte, Contagem, Betim, Ribeirão das Neves, Santa Luzia e toda a região metropolitana.' },
+    ],
   },
   'limpa-lava-e-seca': {
     slug: 'limpa-lava-e-seca',
@@ -57,6 +92,15 @@ const serviceConfigs: Record<string, ServiceConfig> = {
     couponCode: 'LIMPA10',
     whatsappMessage: 'Olá! Vi a promoção de 10% DE DESCONTO na limpeza de lava e seca. Código: LIMPA10',
     keywords: ['limpeza', 'lava e seca', 'manutenção preventiva', 'higienização'],
+    metaTitle: 'Limpeza de Lava e Seca em BH | 10% Desconto - SERVIBEL',
+    metaDescription: 'Limpeza profissional de lava e seca em BH. Elimine mau cheiro, mofo e resíduos. 10% de desconto exclusivo. Prolongue a vida útil do seu aparelho!',
+    seoContent: 'A limpeza regular da sua lava e seca é essencial para manter o desempenho do aparelho e evitar problemas como mau cheiro, mofo, roupas manchadas e até danos mecânicos. A SERVIBEL oferece o serviço completo de higienização e manutenção preventiva: limpamos o tambor, filtros, borrachas, dutos de secagem e dispensers. Com mais de 35 anos de experiência, garantimos um serviço profissional que prolonga a vida útil do seu eletrodoméstico.',
+    faqs: [
+      { question: 'Com que frequência devo limpar minha lava e seca?', answer: 'Recomendamos uma limpeza profissional a cada 6 meses. Se você usa o aparelho diariamente, o ideal é a cada 3-4 meses para evitar acúmulo de resíduos.' },
+      { question: 'A limpeza resolve o mau cheiro da lava e seca?', answer: 'Sim! O mau cheiro geralmente é causado por mofo e resíduos de sabão acumulados no tambor e borrachas. Nossa limpeza profissional elimina completamente o problema.' },
+      { question: 'Quanto tempo leva a limpeza?', answer: 'O serviço completo leva em média 1 a 2 horas, dependendo do estado do aparelho. Fazemos tudo na sua casa, sem necessidade de desmontar.' },
+      { question: 'A limpeza pode evitar consertos futuros?', answer: 'Com certeza! A manutenção preventiva evita o acúmulo de sujeira que pode danificar peças internas, entupir dutos e causar falhas no funcionamento.' },
+    ],
   },
 };
 
