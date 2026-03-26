@@ -206,10 +206,10 @@ const ServiceLanding = () => {
     };
   }, [config]);
 
-
+  // GTM específico para limpa-lava-e-seca (GTM-W7X24QV7)
+  useEffect(() => {
     if (slug !== 'limpa-lava-e-seca') return;
 
-    // Inject GTM script
     const script = document.createElement('script');
     script.innerHTML = `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -218,7 +218,6 @@ const ServiceLanding = () => {
     })(window,document,'script','dataLayer','GTM-W7X24QV7');`;
     document.head.appendChild(script);
 
-    // Inject noscript iframe
     const noscript = document.createElement('noscript');
     const iframe = document.createElement('iframe');
     iframe.src = 'https://www.googletagmanager.com/ns.html?id=GTM-W7X24QV7';
