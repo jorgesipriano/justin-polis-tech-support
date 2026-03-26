@@ -1,4 +1,4 @@
-import { ArrowLeft, MessageCircle, MapPin, Clock, Shield, Star, Gift, Sparkles } from 'lucide-react';
+import { ArrowLeft, MessageCircle, MapPin, Clock, Shield, Star, Gift, Sparkles, ChevronDown } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import logo from '@/assets/logo-servibel.jpeg';
@@ -350,6 +350,52 @@ const ServiceLanding = () => {
                 Usar Cupom no WhatsApp
               </a>
               <p className="text-xs text-muted-foreground mt-4">*Oferta por tempo limitado. Sujeita a disponibilidade.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* SEO Content Section */}
+      <section className="py-12 md:py-16">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-6">
+              Por que escolher a SERVIBEL para {config.title.toLowerCase()}?
+            </h2>
+            <p className="text-muted-foreground leading-relaxed text-lg mb-8">
+              {config.seoContent}
+            </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {config.keywords.map((kw) => (
+                <div key={kw} className="flex items-center gap-2 text-muted-foreground">
+                  <Shield className="w-4 h-4 text-primary shrink-0" />
+                  <span className="capitalize">{kw}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 md:py-16 bg-secondary">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-2xl md:text-3xl font-bold text-foreground mb-8 text-center">
+              Perguntas Frequentes
+            </h2>
+            <div className="space-y-4">
+              {config.faqs.map((faq, i) => (
+                <details key={i} className="group bg-card rounded-xl shadow-sm">
+                  <summary className="flex items-center justify-between cursor-pointer p-5 font-semibold text-foreground hover:text-primary transition-colors list-none">
+                    <span>{faq.question}</span>
+                    <ChevronDown className="w-5 h-5 shrink-0 transition-transform group-open:rotate-180" />
+                  </summary>
+                  <div className="px-5 pb-5 text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </div>
+                </details>
+              ))}
             </div>
           </div>
         </div>
