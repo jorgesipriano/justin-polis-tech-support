@@ -166,7 +166,7 @@ const benefits = [
 const ServiceLanding = () => {
   const location = useLocation();
   const slug = location.pathname.replace('/', '');
-  const [showCoupon, setShowCoupon] = useState(false);
+  const [showBanner, setShowBanner] = useState(false);
   const config = slug ? serviceConfigs[slug] : null;
 
   useEffect(() => {
