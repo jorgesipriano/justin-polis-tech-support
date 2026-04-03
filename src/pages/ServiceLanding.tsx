@@ -1,4 +1,4 @@
-import { ArrowLeft, MessageCircle, MapPin, Clock, Shield, Star, Gift, Sparkles, ChevronDown } from 'lucide-react';
+import { ArrowLeft, MessageCircle, MapPin, Clock, Shield, Star, Sparkles, ChevronDown, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import logo from '@/assets/logo-servibel.jpeg';
