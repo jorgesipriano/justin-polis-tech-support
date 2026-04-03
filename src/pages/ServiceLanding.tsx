@@ -166,13 +166,7 @@ const benefits = [
 const ServiceLanding = () => {
   const location = useLocation();
   const slug = location.pathname.replace('/', '');
-  const [showBanner, setShowBanner] = useState(false);
   const config = slug ? serviceConfigs[slug] : null;
-
-  useEffect(() => {
-    const timer = setTimeout(() => setShowCoupon(true), 1500);
-    return () => clearTimeout(timer);
-  }, []);
 
   // Dynamic SEO meta tags & JSON-LD
   useEffect(() => {
@@ -198,7 +192,6 @@ const ServiceLanding = () => {
     setMeta('og:type', 'website', true);
     setMeta('og:url', `https://servibel.com.br/${config.slug}`, true);
 
-    // Set canonical
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonical) {
       canonical = document.createElement('link');
@@ -207,7 +200,6 @@ const ServiceLanding = () => {
     }
     canonical.href = `https://servibel.com.br/${config.slug}`;
 
-    // JSON-LD structured data
     const jsonLd = document.createElement('script');
     jsonLd.type = 'application/ld+json';
     jsonLd.id = 'service-jsonld';
@@ -218,23 +210,13 @@ const ServiceLanding = () => {
       description: config.metaDescription,
       url: `https://servibel.com.br/${config.slug}`,
       telephone: '+5531984101104',
-      address: {
-        '@type': 'PostalAddress',
-        addressLocality: config.location || 'Belo Horizonte',
-        addressRegion: 'MG',
-        addressCountry: 'BR',
-      },
+      address: { '@type': 'PostalAddress', addressLocality: config.location || 'Belo Horizonte', addressRegion: 'MG', addressCountry: 'BR' },
       areaServed: config.location || 'Belo Horizonte e Região Metropolitana',
       priceRange: '$$',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '4.8',
-        reviewCount: '247',
-      },
+      aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '247' },
     });
     document.head.appendChild(jsonLd);
 
-    // FAQ structured data
     const faqLd = document.createElement('script');
     faqLd.type = 'application/ld+json';
     faqLd.id = 'faq-jsonld';
@@ -244,10 +226,7 @@ const ServiceLanding = () => {
       mainEntity: config.faqs.map((faq) => ({
         '@type': 'Question',
         name: faq.question,
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: faq.answer,
-        },
+        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
       })),
     });
     document.head.appendChild(faqLd);
@@ -258,7 +237,7 @@ const ServiceLanding = () => {
     };
   }, [config]);
 
-  // GTM específico para limpa-lava-e-seca (GTM-W7X24QV7)
+  // GTM específico para limpa-lava-e-seca
   useEffect(() => {
     if (slug !== 'limpa-lava-e-seca') return;
 
@@ -313,32 +292,30 @@ const ServiceLanding = () => {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-green-700 transition-colors"
+            className="flex items-center gap-2 bg-primary text-primary-foreground px-4 py-2 rounded-lg font-semibold text-sm hover:bg-primary/90 transition-colors"
           >
             <MessageCircle className="w-4 h-4" />
-            Garantir Desconto
+            Falar com Técnico
           </a>
         </div>
       </header>
 
-      {/* Coupon Banner */}
-      {showCoupon && (
-        <div className="bg-gradient-to-r from-green-600 to-green-500 text-white py-3 animate-fade-in">
-          <div className="container mx-auto px-4 flex items-center justify-center gap-3 text-center">
-            <Gift className="w-5 h-5 shrink-0 animate-bounce" />
-            <p className="font-bold text-sm md:text-base">
-              {config.couponLabel} — Use o código <span className="bg-white/20 px-2 py-0.5 rounded font-mono">{config.couponCode}</span> no WhatsApp!
-            </p>
-          </div>
+      {/* Trust Banner */}
+      <div className="bg-primary text-primary-foreground py-3">
+        <div className="container mx-auto px-4 flex items-center justify-center gap-3 text-center">
+          <Shield className="w-5 h-5 shrink-0" />
+          <p className="font-bold text-sm md:text-base">
+            +35 Anos de Experiência • Garantia em Todos os Serviços • Peças Originais
+          </p>
         </div>
-      )}
+      </div>
 
       {/* Hero */}
       <section className="bg-hero text-primary-foreground py-16 md:py-24">
         <div className="container mx-auto px-4 text-center">
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
             <Sparkles className="w-4 h-4 text-accent" />
-            <span className="text-sm font-semibold">{config.couponLabel} — Oferta Exclusiva!</span>
+            <span className="text-sm font-semibold">{config.ctaLabel}</span>
           </div>
           <h1 className="font-display text-3xl md:text-5xl lg:text-6xl font-extrabold mb-3 leading-tight">
             {config.title}
@@ -353,12 +330,12 @@ const ServiceLanding = () => {
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-all duration-300 shadow-2xl"
+            className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-all duration-300 shadow-2xl"
           >
             <MessageCircle className="w-7 h-7" />
-            Quero Meu Desconto no WhatsApp!
+            Chamar Técnico Agora
           </a>
-          <p className="text-sm mt-4 opacity-70">Atendimento imediato • Sem compromisso</p>
+          <p className="text-sm mt-4 opacity-70">Atendimento imediato • Orçamento sem compromisso</p>
         </div>
       </section>
 
@@ -378,30 +355,32 @@ const ServiceLanding = () => {
         </div>
       </section>
 
-      {/* Coupon Card */}
+      {/* Social Proof */}
       <section className="py-12 md:py-16 bg-secondary">
         <div className="container mx-auto px-4">
-          <div className="max-w-lg mx-auto bg-card rounded-3xl shadow-xl overflow-hidden border-2 border-dashed border-green-400">
-            <div className="bg-green-600 text-white p-6 text-center">
-              <Gift className="w-10 h-10 mx-auto mb-2" />
-              <h2 className="font-display text-2xl font-bold">{config.couponLabel}</h2>
-              <p className="text-sm opacity-90 mt-1">Exclusivo para quem chegou por esta página</p>
+          <div className="max-w-lg mx-auto bg-card rounded-3xl shadow-xl overflow-hidden border border-border">
+            <div className="bg-primary text-primary-foreground p-6 text-center">
+              <Star className="w-10 h-10 mx-auto mb-2" />
+              <h2 className="font-display text-2xl font-bold">Confiança de Quem Conhece</h2>
+              <p className="text-sm opacity-90 mt-1">+35 anos cuidando dos seus eletrodomésticos</p>
             </div>
             <div className="p-8 text-center">
-              <p className="text-muted-foreground mb-4">Apresente o código abaixo no WhatsApp:</p>
-              <div className="bg-secondary rounded-xl py-4 px-6 mb-6">
-                <span className="font-mono text-3xl font-extrabold text-primary tracking-widest">{config.couponCode}</span>
+              <div className="flex items-center justify-center gap-1 mb-3">
+                {[1, 2, 3, 4, 5].map((s) => (
+                  <Star key={s} className="w-6 h-6 text-accent fill-accent" />
+                ))}
               </div>
+              <p className="text-muted-foreground mb-2 text-lg font-semibold">4.8 / 5.0</p>
+              <p className="text-muted-foreground mb-6 text-sm">Baseado em avaliações de clientes reais</p>
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-3 bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg w-full justify-center"
+                className="inline-flex items-center gap-3 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-all duration-300 shadow-lg w-full justify-center"
               >
                 <MessageCircle className="w-6 h-6" />
-                Usar Cupom no WhatsApp
+                Falar com Especialista
               </a>
-              <p className="text-xs text-muted-foreground mt-4">*Oferta por tempo limitado. Sujeita a disponibilidade.</p>
             </div>
           </div>
         </div>
@@ -457,21 +436,21 @@ const ServiceLanding = () => {
       <section className="py-16 md:py-24 bg-hero text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-4">
-            Não Perca Esta Oportunidade!
+            Resolvemos Seu Problema Hoje!
           </h2>
           <p className="text-lg opacity-90 mb-8 max-w-xl mx-auto">
             {config.location
-              ? `Atendemos em ${config.location} e região. Fale agora e garanta sua oferta exclusiva!`
-              : 'Fale agora e garanta sua oferta exclusiva! Atendemos BH e toda a região metropolitana.'}
+              ? `Atendemos em ${config.location} e região. Fale agora com um técnico especializado!`
+              : 'Fale agora com um técnico especializado! Atendemos BH e toda a região metropolitana.'}
           </p>
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-all duration-300 shadow-2xl"
+            className="inline-flex items-center gap-3 bg-accent text-accent-foreground px-10 py-5 rounded-2xl font-bold text-xl hover:scale-105 transition-all duration-300 shadow-2xl"
           >
             <MessageCircle className="w-7 h-7" />
-            Chamar Agora no WhatsApp
+            Chamar Técnico no WhatsApp
           </a>
         </div>
       </section>
