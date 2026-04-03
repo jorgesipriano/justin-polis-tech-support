@@ -13,8 +13,7 @@ interface ServiceConfig {
   title: string;
   subtitle: string;
   heroDescription: string;
-  couponLabel: string;
-  couponCode: string;
+  ctaLabel: string;
   whatsappMessage: string;
   location?: string;
   keywords: string[];
