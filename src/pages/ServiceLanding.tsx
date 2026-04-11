@@ -410,6 +410,40 @@ const ServiceLanding = () => {
         </div>
       </section>
 
+      {/* Local SEO Section */}
+      <section className="py-10 bg-card border-y border-border">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="font-display text-xl md:text-2xl font-bold text-foreground mb-4 text-center">
+              <MapPin className="w-5 h-5 inline-block mr-2 text-primary" />
+              Atendimento em Justinópolis, Ribeirão das Neves e BH
+            </h2>
+            <p className="text-muted-foreground leading-relaxed text-center mb-6">
+              A SERVIBEL atende moradores de <strong className="text-foreground">Justinópolis</strong>, <strong className="text-foreground">Ribeirão das Neves</strong> e toda <strong className="text-foreground">Belo Horizonte</strong> para 
+              conserto, reparo e manutenção de eletrodomésticos. Se você precisa arrumar, consertar ou fazer reparo de geladeira, máquina de lavar, 
+              lava e seca, microondas ou freezer em <strong className="text-foreground">Justinópolis</strong> e <strong className="text-foreground">Ribeirão das Neves</strong>, estamos pertinho de você!
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 text-sm text-muted-foreground">
+              {[
+                'Conserto em Justinópolis',
+                'Reparo em Ribeirão das Neves',
+                'Arrumar eletrodomésticos BH',
+                'Técnico em Justinópolis',
+                'Assistência Ribeirão das Neves',
+                'Conserto geladeira Justinópolis',
+                'Reparo máquina de lavar Ribeirão das Neves',
+                'Arrumar lava e seca Justinópolis',
+                'Conserto freezer Ribeirão das Neves',
+              ].map((tag) => (
+                <span key={tag} className="bg-secondary px-3 py-2 rounded-lg text-center">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ Section */}
       <section className="py-12 md:py-16 bg-secondary">
         <div className="container mx-auto px-4">
