@@ -157,8 +157,8 @@ const serviceConfigs: Record<string, ServiceConfig> = {
       { question: 'Quais regiões vocês atendem?', answer: 'Justinópolis, Ribeirão das Neves, Belo Horizonte, Contagem, Betim, Santa Luzia, Vespasiano e toda a região metropolitana.' },
     ],
   },
-  'conserto-geladeira-justinopolis-2': {
-    slug: 'conserto-geladeira-justinopolis-2',
+  'conserto-geladeira-justinopolis': {
+    slug: 'conserto-geladeira-justinopolis',
     title: 'Conserto de Geladeira em Justinópolis',
     subtitle: 'Técnico chega rápido na sua casa hoje',
     heroDescription: 'Sua geladeira parou de gelar em Justinópolis e os alimentos estão estragando? Não espere mais! A SERVIBEL é a assistência técnica nº 1 em Justinópolis há 35 anos. Conserto, reparo e diagnóstico no mesmo dia, na sua porta.',
