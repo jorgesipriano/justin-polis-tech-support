@@ -32,6 +32,11 @@ const App = () => (
             <Route path="/conserto-microondas-bh" element={<ServiceLanding />} />
             <Route path="/conserto-freezer-bh" element={<ServiceLanding />} />
             <Route path="/conserto-maquina-lavar" element={<ServiceLanding />} />
+            <Route path="/conserto-geladeira-justinopolis" element={<ServiceLanding />} />
+            <Route path="/conserto-maquina-lavar-justinopolis" element={<ServiceLanding />} />
+            <Route path="/conserto-lava-e-seca-justinopolis" element={<ServiceLanding />} />
+            <Route path="/conserto-microondas-justinopolis" element={<ServiceLanding />} />
+            <Route path="/conserto-freezer-justinopolis" element={<ServiceLanding />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

@@ -44,6 +44,36 @@ const serviceLinks = [
     keywords: ['limpeza', 'higienização', 'manutenção preventiva', 'lava e seca'],
     href: '/limpa-lava-e-seca',
   },
+  {
+    title: 'Conserto de Geladeira em Justinópolis',
+    description: 'Geladeira parou de gelar em Justinópolis? Técnico na sua porta hoje mesmo.',
+    keywords: ['geladeira', 'Justinópolis', 'urgente'],
+    href: '/conserto-geladeira-justinopolis',
+  },
+  {
+    title: 'Conserto de Máquina de Lavar em Justinópolis',
+    description: 'Lavadora travada ou vazando em Justinópolis? Reparo no mesmo dia, na sua casa.',
+    keywords: ['máquina de lavar', 'Justinópolis', 'reparo'],
+    href: '/conserto-maquina-lavar-justinopolis',
+  },
+  {
+    title: 'Conserto de Lava e Seca em Justinópolis',
+    description: 'Especialistas certificados em lava e seca em Justinópolis. Todas as marcas.',
+    keywords: ['lava e seca', 'Justinópolis', 'especialista'],
+    href: '/conserto-lava-e-seca-justinopolis',
+  },
+  {
+    title: 'Conserto de Microondas em Justinópolis',
+    description: 'Microondas com defeito em Justinópolis? Reparo seguro e com garantia.',
+    keywords: ['microondas', 'Justinópolis', 'seguro'],
+    href: '/conserto-microondas-justinopolis',
+  },
+  {
+    title: 'Conserto de Freezer em Justinópolis',
+    description: 'Freezer parado em Justinópolis? Atendimento de emergência hoje mesmo.',
+    keywords: ['freezer', 'Justinópolis', 'emergência'],
+    href: '/conserto-freezer-justinopolis',
+  },
 ];
 
 const SeoServices = () => {
