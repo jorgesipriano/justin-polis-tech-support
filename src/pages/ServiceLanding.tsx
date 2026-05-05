@@ -308,7 +308,7 @@ const ServiceLanding = () => {
     jsonLd.textContent = JSON.stringify({
       '@context': 'https://schema.org',
       '@type': 'LocalBusiness',
-      name: 'SERVIBEL - Assistência Técnica e Peças',
+      name: 'SERVIBEL - Assistência Técnica',
       description: config.metaDescription,
       url: `https://servibel.com.br/${config.slug}`,
       telephone: '+5531984101104',
@@ -595,7 +595,7 @@ const ServiceLanding = () => {
       <footer className="bg-foreground text-background py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm opacity-70">
-            © {new Date().getFullYear()} SERVIBEL - Assistência Técnica e Peças. Todos os direitos reservados.
+            © {new Date().getFullYear()} SERVIBEL - Assistência Técnica. Todos os direitos reservados.
           </p>
         </div>
       </footer>

@@ -220,7 +220,7 @@ const About = () => {
       <footer className="bg-foreground text-background py-8">
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm opacity-70">
-            © {new Date().getFullYear()} SERVIBEL - Assistência Técnica e Peças. Todos os direitos reservados.
+            © {new Date().getFullYear()} SERVIBEL - Assistência Técnica. Todos os direitos reservados.
           </p>
         </div>
       </footer>
