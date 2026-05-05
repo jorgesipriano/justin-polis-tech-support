@@ -87,6 +87,9 @@ const Hero = () => {
               alt="Técnico SERVIBEL uniformizado pronto para atendimento em Justinópolis"
               width={1024}
               height={1024}
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
               className="relative rounded-3xl shadow-2xl object-cover w-full h-auto border-4 border-primary-foreground/20 animate-float"
             />
             <div className="absolute -bottom-6 -left-6 bg-accent text-accent-foreground px-6 py-4 rounded-2xl shadow-xl">
