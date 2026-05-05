@@ -9,6 +9,7 @@ import Admin from "./pages/Admin";
 import AdminLogin from "./pages/AdminLogin";
 import About from "./pages/About";
 import ServiceLanding from "./pages/ServiceLanding";
+import BlogDicasLimpezaMaquina from "./pages/BlogDicasLimpezaMaquina";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => (
             <Route path="/conserto-lava-e-seca-justinopolis" element={<ServiceLanding />} />
             <Route path="/conserto-microondas-justinopolis" element={<ServiceLanding />} />
             <Route path="/conserto-freezer-justinopolis" element={<ServiceLanding />} />
+            <Route path="/blog/dicas-limpeza-maquina" element={<BlogDicasLimpezaMaquina />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
