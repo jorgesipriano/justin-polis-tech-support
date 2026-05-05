@@ -1,3 +1,4 @@
+import heroImg from '@/assets/dicas/higienizacao.jpg';
 import ArticleLayout, { CTAWhats } from './ArticleLayout';
 
 const Page = () => (
@@ -6,7 +7,7 @@ const Page = () => (
     metaTitle="Crosta oculta na máquina de lavar: o que acontece sem higienização | SERVIBEL"
     title="A crosta oculta: o que acontece com a sua máquina de lavar se você nunca fez uma higienização técnica."
     description="Atrás do tambor da sua máquina existe uma camada de borra que nenhum sabão alcança. Veja o que isso causa — e a solução técnica."
-    image="/placeholder.svg"
+    image={heroImg}
     imageAlt="Crosta oculta dentro de máquina de lavar"
   >
     <p>

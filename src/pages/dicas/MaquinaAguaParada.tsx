@@ -1,3 +1,4 @@
+import heroImg from '@/assets/dicas/agua-parada.jpg';
 import ArticleLayout, { CTAWhats } from './ArticleLayout';
 
 const Page = () => (
@@ -6,7 +7,7 @@ const Page = () => (
     metaTitle="Água parada na máquina de lavar? Guia rápido de drenagem | SERVIBEL"
     title="Água parada na máquina de lavar? O guia rápido para resolver problemas de drenagem antes de chamar o técnico."
     description="Máquina não escoa a água? Veja o passo a passo simples para destravar a drenagem em casa antes de gastar com técnico."
-    image="/placeholder.svg"
+    image={heroImg}
     imageAlt="Máquina de lavar com água parada no tambor"
   >
     <p>

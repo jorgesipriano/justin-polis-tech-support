@@ -1,3 +1,4 @@
+import heroImg from '@/assets/dicas/geladeira-borracha.jpg';
 import ArticleLayout, { CTAWhats } from './ArticleLayout';
 
 const Page = () => (
@@ -6,7 +7,7 @@ const Page = () => (
     metaTitle="Geladeira gastando muita luz? 3 sinais da borracha de vedação | SERVIBEL"
     title="Sua geladeira está gastando demais? 3 sinais de que a borracha de vedação precisa de troca urgente."
     description="A borracha gasta da geladeira pode aumentar sua conta de luz em até 30%. Veja os 3 sinais de alerta e como resolver rápido em Justinópolis."
-    image="/placeholder.svg"
+    image={heroImg}
     imageAlt="Geladeira com borracha de vedação danificada"
   >
     <p>
