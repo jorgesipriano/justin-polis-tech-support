@@ -1,3 +1,4 @@
+import heroImg from '@/assets/dicas/microondas-faiscas.jpg';
 import ArticleLayout, { CTAWhats } from './ArticleLayout';
 
 const Page = () => (
@@ -6,7 +7,7 @@ const Page = () => (
     metaTitle="Micro-ondas com faíscas e barulho? Risco real | SERVIBEL"
     title="O perigo escondido no seu Micro-ondas: por que faíscas e barulhos estranhos não podem ser ignorados."
     description="Faíscas dentro do micro-ondas são sinal de risco de incêndio e vazamento de radiação. Saiba o que fazer agora — atendemos em Justinópolis."
-    image="/placeholder.svg"
+    image={heroImg}
     imageAlt="Micro-ondas com faíscas internas"
   >
     <p>

@@ -1,3 +1,4 @@
+import heroImg from '@/assets/dicas/lava-seca.jpg';
 import ArticleLayout, { CTAWhats } from './ArticleLayout';
 
 const Page = () => (
@@ -6,7 +7,7 @@ const Page = () => (
     metaTitle="Lava e Seca parou de secar? Cuidado com a resistência | SERVIBEL"
     title="Por que sua Lava e Seca parou de secar? O erro comum que pode queimar a resistência do seu aparelho."
     description="Roupa saindo úmida da lava e seca? Existe um erro de uso simples que queima a resistência. Entenda antes que o conserto fique caro."
-    image="/placeholder.svg"
+    image={heroImg}
     imageAlt="Lava e Seca aberta com roupas dentro"
   >
     <p>
