@@ -135,6 +135,21 @@ const SeoServices = () => {
             Se você está procurando <strong>arrumar geladeira</strong>, <strong>consertar máquina de lavar</strong>, <strong>reparar lava e seca</strong>, <strong>arrumar freezer</strong> ou <strong>consertar microondas</strong> em BH, 
             a SERVIBEL é a escolha certa. Atendemos todas as marcas: <strong>Brastemp</strong>, <strong>Electrolux</strong>, <strong>LG</strong>, <strong>Samsung</strong>, <strong>Consul</strong>, <strong>Panasonic</strong>, <strong>Metalfrio</strong> e muito mais.
           </p>
+          <p>
+            <strong>Conserto de máquina de lavar em Justinópolis</strong>, <strong>reparo de máquina de lavar em Justinópolis</strong>,
+            <strong> assistência técnica em Justinópolis</strong>, <strong>máquina de lavar estragada em Justinópolis</strong>,
+            <strong> técnico de máquina de lavar em Justinópolis</strong>, <strong>arrumar máquina de lavar em Justinópolis</strong>,
+            <strong> manutenção de máquina de lavar em Justinópolis</strong>, <strong>conserto de geladeira em Justinópolis</strong>,
+            <strong> conserto de lava e seca em Justinópolis</strong>, <strong>conserto de freezer em Justinópolis</strong> e
+            <strong> conserto de microondas em Justinópolis</strong> — atendimento no mesmo dia, em domicílio, com garantia por escrito.
+          </p>
+          <p>
+            Atendemos os bairros <strong>Bairro Kátia</strong>, <strong>Rosaneves</strong>, <strong>Veneza</strong>,
+            <strong> Sevilha</strong>, <strong>Liberdade</strong>, <strong>Pampulinha</strong>, <strong>Justinópolis Centro</strong>
+            e toda a região de <strong>Ribeirão das Neves</strong>. Se sua <strong>máquina está estragada</strong>,
+            <strong> não centrifuga</strong>, <strong>não enche</strong>, <strong>não esquenta</strong>, <strong>não seca</strong>,
+            <strong> está vazando</strong>, <strong>fazendo barulho</strong> ou <strong>com erro na placa</strong>, fale com o dono da SERVIBEL pelo WhatsApp.
+          </p>
         </div>
       </div>
     </section>

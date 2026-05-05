@@ -24,7 +24,33 @@ const localBusiness = {
   },
   "areaServed": [
     { "@type": "City", "name": "Ribeirão das Neves" },
-    { "@type": "Place", "name": "Justinópolis" }
+    { "@type": "Place", "name": "Justinópolis" },
+    { "@type": "Place", "name": "Bairro Kátia - Justinópolis" },
+    { "@type": "Place", "name": "Rosaneves - Justinópolis" },
+    { "@type": "Place", "name": "Veneza - Justinópolis" },
+    { "@type": "Place", "name": "Sevilha - Justinópolis" },
+    { "@type": "Place", "name": "Liberdade - Justinópolis" },
+    { "@type": "Place", "name": "Pampulinha - Justinópolis" },
+    { "@type": "City", "name": "Belo Horizonte" },
+    { "@type": "City", "name": "Vespasiano" },
+    { "@type": "City", "name": "Santa Luzia" }
+  ],
+  "knowsAbout": [
+    "Conserto de máquina de lavar em Justinópolis",
+    "Reparo de máquina de lavar estragada",
+    "Assistência técnica em Justinópolis",
+    "Conserto de lava e seca em Justinópolis",
+    "Conserto de geladeira em Justinópolis",
+    "Conserto de freezer em Justinópolis",
+    "Conserto de microondas em Justinópolis",
+    "Manutenção preventiva de eletrodomésticos"
+  ],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de máquina de lavar em Justinópolis" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Reparo de lava e seca em Justinópolis" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de geladeira em Justinópolis" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de freezer em Justinópolis" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de microondas em Justinópolis" } }
   ],
   "openingHoursSpecification": [{
     "@type": "OpeningHoursSpecification",
@@ -69,6 +95,38 @@ const faqSchema = {
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Sim, atendemos em domicílio em todos os bairros de Ribeirão das Neves e Justinópolis, incluindo Bairro Kátia, Rosaneves, Veneza, Sevilha, Liberdade e Pampulinha."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Minha máquina de lavar está estragada em Justinópolis. Vocês atendem hoje?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. A SERVIBEL atende em domicílio em Justinópolis no mesmo dia para máquina de lavar estragada, travada, vazando ou que não centrifuga. Orçamento gratuito pelo WhatsApp (31) 98410-1104."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quem faz reparo de máquina de lavar em Justinópolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A SERVIBEL é referência em reparo de máquina de lavar em Justinópolis há 35 anos. Atendemos todas as marcas (Brastemp, Electrolux, LG, Samsung, Consul) com garantia por escrito."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Onde consertar lava e seca em Justinópolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A SERVIBEL conserta lava e seca de todas as marcas em Justinópolis e Ribeirão das Neves. Diagnóstico técnico no local, peças originais e garantia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quanto tempo demora o conserto de máquina de lavar em Justinópolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Na maioria dos casos o reparo é feito no mesmo dia da visita técnica em Justinópolis. Para peças específicas, prazo médio de 24 a 48 horas."
       }
     }
   ]
