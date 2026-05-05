@@ -30,7 +30,7 @@ const WhatsAppButton = () => {
           target="_blank"
           rel="noopener noreferrer"
           onClick={handleClick}
-          className="relative flex items-center gap-3 bg-white rounded-2xl shadow-2xl pl-2 pr-4 py-2 max-w-[260px] animate-in fade-in slide-in-from-bottom-2 duration-500 border border-border hover:shadow-xl transition-shadow"
+          className="relative flex items-center gap-4 bg-white rounded-2xl shadow-2xl pl-3 pr-5 py-3 max-w-[340px] animate-in fade-in slide-in-from-bottom-2 duration-500 border border-border hover:shadow-xl transition-shadow"
           aria-label="Mensagem do técnico SERVIBEL"
         >
           <button
@@ -49,14 +49,14 @@ const WhatsAppButton = () => {
           <img
             src={tecnicoAvatar}
             alt="Técnico SERVIBEL"
-            width={48}
-            height={48}
+            width={64}
+            height={64}
             loading="lazy"
-            className="w-12 h-12 rounded-full object-cover bg-secondary shrink-0"
+            className="w-16 h-16 rounded-full object-cover bg-secondary shrink-0"
           />
           <div className="text-left">
-            <p className="text-xs font-semibold text-foreground leading-tight">Técnico SERVIBEL</p>
-            <p className="text-sm text-foreground leading-snug">Olá 👋 Posso ajudar?</p>
+            <p className="text-sm font-semibold text-foreground leading-tight">Técnico SERVIBEL</p>
+            <p className="text-base text-foreground leading-snug">Olá 👋 Posso ajudar?</p>
           </div>
           <span className="absolute -bottom-1 right-8 w-3 h-3 bg-white border-r border-b border-border rotate-45"></span>
         </a>
