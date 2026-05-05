@@ -10,6 +10,11 @@ import AdminLogin from "./pages/AdminLogin";
 import About from "./pages/About";
 import ServiceLanding from "./pages/ServiceLanding";
 import BlogDicasLimpezaMaquina from "./pages/BlogDicasLimpezaMaquina";
+import GeladeiraBorrachaVedacao from "./pages/dicas/GeladeiraBorrachaVedacao";
+import LavaSecaNaoSeca from "./pages/dicas/LavaSecaNaoSeca";
+import MicroondasFaiscas from "./pages/dicas/MicroondasFaiscas";
+import MaquinaAguaParada from "./pages/dicas/MaquinaAguaParada";
+import HigienizacaoCrostaOculta from "./pages/dicas/HigienizacaoCrostaOculta";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -39,6 +44,11 @@ const App = () => (
             <Route path="/conserto-microondas-justinopolis" element={<ServiceLanding />} />
             <Route path="/conserto-freezer-justinopolis" element={<ServiceLanding />} />
             <Route path="/blog/dicas-limpeza-maquina" element={<BlogDicasLimpezaMaquina />} />
+            <Route path="/dicas/geladeira-borracha-vedacao" element={<GeladeiraBorrachaVedacao />} />
+            <Route path="/dicas/lava-e-seca-nao-seca" element={<LavaSecaNaoSeca />} />
+            <Route path="/dicas/microondas-faiscas-perigo" element={<MicroondasFaiscas />} />
+            <Route path="/dicas/maquina-agua-parada-drenagem" element={<MaquinaAguaParada />} />
+            <Route path="/dicas/higienizacao-crosta-oculta" element={<HigienizacaoCrostaOculta />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
