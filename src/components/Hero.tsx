@@ -21,7 +21,7 @@ const Hero = () => {
             <div className="inline-flex items-center gap-2 bg-accent/20 border border-accent/40 px-4 py-2 rounded-full mb-6">
               <MapPin className="w-4 h-4 text-accent" />
               <span className="text-accent font-semibold text-sm md:text-base">
-                Atendimento em domicílio · Bairro Kátia · Justinópolis
+                Atendimento em domicílio · Justinópolis
               </span>
             </div>
 
