@@ -150,6 +150,14 @@ const SeoServices = () => {
             <strong> não centrifuga</strong>, <strong>não enche</strong>, <strong>não esquenta</strong>, <strong>não seca</strong>,
             <strong> está vazando</strong>, <strong>fazendo barulho</strong> ou <strong>com erro na placa</strong>, fale com o dono da SERVIBEL pelo WhatsApp.
           </p>
+          <p>
+            <strong>Geladeira não gela em Justinópolis</strong>, <strong>geladeira parou de funcionar em Justinópolis</strong>,
+            <strong> geladeira não está gelando em Justinópolis</strong>, <strong>técnico de geladeira em Justinópolis</strong>,
+            <strong> arrumar geladeira em Justinópolis</strong>, <strong>conserto de refrigerador em Justinópolis</strong>,
+            <strong> troca de gás de geladeira em Justinópolis</strong>, <strong>geladeira fazendo barulho em Justinópolis</strong>,
+            <strong> geladeira vazando água em Justinópolis</strong> e <strong>freezer não gela em Justinópolis</strong> —
+            diagnóstico no local, peças originais e garantia por escrito.
+          </p>
         </div>
       </div>
     </section>

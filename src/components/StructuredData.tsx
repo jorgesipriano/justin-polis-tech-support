@@ -41,6 +41,11 @@ const localBusiness = {
     "Assistência técnica em Justinópolis",
     "Conserto de lava e seca em Justinópolis",
     "Conserto de geladeira em Justinópolis",
+    "Geladeira não gela em Justinópolis",
+    "Geladeira parou de funcionar em Justinópolis",
+    "Técnico de geladeira em Justinópolis",
+    "Troca de gás de geladeira em Justinópolis",
+    "Reparo de refrigerador em Justinópolis",
     "Conserto de freezer em Justinópolis",
     "Conserto de microondas em Justinópolis",
     "Manutenção preventiva de eletrodomésticos"
@@ -127,6 +132,38 @@ const faqSchema = {
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "Na maioria dos casos o reparo é feito no mesmo dia da visita técnica em Justinópolis. Para peças específicas, prazo médio de 24 a 48 horas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Minha geladeira não está gelando em Justinópolis. O que pode ser?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Geladeira que não gela em Justinópolis geralmente está com falta de gás, compressor com defeito, termostato queimado ou sensor de degelo travado. A SERVIBEL faz diagnóstico no local em Justinópolis e Ribeirão das Neves com orçamento gratuito."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Quem é o melhor técnico de geladeira em Justinópolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A SERVIBEL é referência em conserto de geladeira em Justinópolis há 35 anos. Atendemos todas as marcas (Brastemp, Consul, Electrolux, LG, Samsung) com peças originais e garantia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Vocês fazem troca de gás de geladeira em Justinópolis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Fazemos recarga e troca de gás de geladeira e freezer em Justinópolis e Ribeirão das Neves, com teste de vazamento e garantia."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Geladeira fazendo barulho em Justinópolis: tem conserto?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sim. Barulho na geladeira normalmente vem do compressor, ventoinha do freezer ou bandeja de degelo. A SERVIBEL identifica a causa no local em Justinópolis e resolve no mesmo dia na maioria dos casos."
       }
     }
   ]
