@@ -20,12 +20,12 @@ const Header = () => {
           <a href="#inicio" className="flex items-center gap-3">
             <img 
               src={logo} 
-              alt="SERVIBEL - Assistência Técnica e Peças" 
+              alt="SERVIBEL - Assistência Técnica" 
               className="h-14 w-14 rounded-lg object-cover"
             />
             <div className="hidden sm:block">
               <span className="font-display font-bold text-xl text-primary">SERVIBEL</span>
-              <p className="text-xs text-muted-foreground">Assistência Técnica e Peças</p>
+              <p className="text-xs text-muted-foreground">Assistência Técnica</p>
             </div>
           </a>
 
