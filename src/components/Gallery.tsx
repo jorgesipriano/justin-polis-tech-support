@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
-import { Video } from 'lucide-react';
+import { Video, Instagram } from 'lucide-react';
 
 interface GalleryItem {
   id: string;
@@ -33,6 +33,15 @@ const Gallery = () => {
             Conheça a <span className="text-primary">Servibel</span>
           </h2>
           <p className="text-muted-foreground mt-2">Nossa estrutura e equipe prontas para atender você</p>
+          <a
+            href="https://www.instagram.com/servibel.assistencia/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-5 px-5 py-3 rounded-full font-semibold text-white shadow-lg hover:scale-[1.03] transition-transform bg-gradient-to-tr from-[#feda75] via-[#d62976] to-[#4f5bd5]"
+          >
+            <Instagram className="w-5 h-5" />
+            Veja nosso portfólio no Instagram @servibel.assistencia
+          </a>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-3xl mx-auto">
