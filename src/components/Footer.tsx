@@ -1,4 +1,4 @@
-import { Phone, MapPin, Mail } from 'lucide-react';
+import { Phone, MapPin, Mail, Instagram } from 'lucide-react';
 import logo from '@/assets/logo-servibel.jpeg';
 
 const Footer = () => {
@@ -67,6 +67,17 @@ const Footer = () => {
                 <span className="text-sm text-primary-foreground/80">
                   Rua Pedro Moreira do Nasc. 120, Bairro Kátia - Ribeirão das Neves, MG
                 </span>
+              </li>
+              <li className="flex items-start gap-3">
+                <Instagram className="w-4 h-4 mt-0.5 flex-shrink-0" />
+                <a
+                  href="https://www.instagram.com/servibel.assistencia/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  @servibel.assistencia
+                </a>
               </li>
             </ul>
           </div>
