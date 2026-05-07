@@ -15,6 +15,7 @@ import LavaSecaNaoSeca from "./pages/dicas/LavaSecaNaoSeca";
 import MicroondasFaiscas from "./pages/dicas/MicroondasFaiscas";
 import MaquinaAguaParada from "./pages/dicas/MaquinaAguaParada";
 import HigienizacaoCrostaOculta from "./pages/dicas/HigienizacaoCrostaOculta";
+import BairroLanding, { bairroSlugs } from "./pages/BairroLanding";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -49,6 +50,9 @@ const App = () => (
             <Route path="/dicas/microondas-faiscas-perigo" element={<MicroondasFaiscas />} />
             <Route path="/dicas/maquina-agua-parada-drenagem" element={<MaquinaAguaParada />} />
             <Route path="/dicas/higienizacao-crosta-oculta" element={<HigienizacaoCrostaOculta />} />
+            {bairroSlugs.map((slug) => (
+              <Route key={slug} path={`/${slug}`} element={<BairroLanding />} />
+            ))}
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
