@@ -8,6 +8,7 @@ import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import WhatsAppPopup from '@/components/WhatsAppPopup';
+import TopReminder from '@/components/TopReminder';
 import FAQ from '@/components/FAQ';
 import MobileActionBar from '@/components/MobileActionBar';
 import StructuredData from '@/components/StructuredData';
@@ -29,6 +30,7 @@ const Index = () => {
       <Footer />
       <WhatsAppButton />
       <WhatsAppPopup />
+      <TopReminder />
       <MobileActionBar />
     </div>
   );
