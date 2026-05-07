@@ -1,5 +1,5 @@
 import { useEffect, ReactNode } from 'react';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, Instagram } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import MobileActionBar from '@/components/MobileActionBar';
@@ -131,8 +131,17 @@ const ArticleLayout = ({ title, metaTitle, description, category, image, imageAl
               Servibel Assistência Técnica – 35 anos de tradição em Justinópolis, Ribeirão das Neves e BH.
               Fale com o dono:
             </p>
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center gap-4">
               <CTAWhats />
+              <a
+                href="https://www.instagram.com/servibel.assistencia/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-primary font-semibold hover:underline"
+              >
+                <Instagram className="w-5 h-5" />
+                @servibel.assistencia no Instagram
+              </a>
             </div>
           </aside>
         </article>
