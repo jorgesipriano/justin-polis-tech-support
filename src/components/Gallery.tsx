@@ -40,7 +40,7 @@ const Gallery = () => {
             className="inline-flex items-center gap-2 mt-5 px-5 py-3 rounded-full font-semibold text-white shadow-lg hover:scale-[1.03] transition-transform bg-gradient-to-tr from-[#feda75] via-[#d62976] to-[#4f5bd5]"
           >
             <Instagram className="w-5 h-5" />
-            Veja nosso portfólio no Instagram @servibel.assistencia
+            Veja serviços reais e clientes satisfeitos no Instagram
           </a>
         </div>
 
