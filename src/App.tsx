@@ -15,6 +15,9 @@ import LavaSecaNaoSeca from "./pages/dicas/LavaSecaNaoSeca";
 import MicroondasFaiscas from "./pages/dicas/MicroondasFaiscas";
 import MaquinaAguaParada from "./pages/dicas/MaquinaAguaParada";
 import HigienizacaoCrostaOculta from "./pages/dicas/HigienizacaoCrostaOculta";
+import GeladeiraGastandoMuito from "./pages/dicas/GeladeiraGastandoMuito";
+import ErroLavaESeca from "./pages/dicas/ErroLavaESeca";
+import PerigoMicroondas from "./pages/dicas/PerigoMicroondas";
 import BairroLanding, { bairroSlugs } from "./pages/BairroLanding";
 import NotFound from "./pages/NotFound";
 
@@ -50,6 +53,9 @@ const App = () => (
             <Route path="/dicas/microondas-faiscas-perigo" element={<MicroondasFaiscas />} />
             <Route path="/dicas/maquina-agua-parada-drenagem" element={<MaquinaAguaParada />} />
             <Route path="/dicas/higienizacao-crosta-oculta" element={<HigienizacaoCrostaOculta />} />
+            <Route path="/dicas/geladeira-gastando-muito" element={<GeladeiraGastandoMuito />} />
+            <Route path="/dicas/erro-lava-e-seca" element={<ErroLavaESeca />} />
+            <Route path="/dicas/perigo-microondas" element={<PerigoMicroondas />} />
             {bairroSlugs.map((slug) => (
               <Route key={slug} path={`/${slug}`} element={<BairroLanding />} />
             ))}
