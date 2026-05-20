@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 const localBusiness = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
-  "@id": "https://servibel.com.br/#localbusiness",
+  "@id": "https://www.servibel.com.br/#localbusiness",
   "name": "SERVIBEL - Assistência Técnica",
-  "image": "https://servibel.com.br/icon-512.png",
-  "url": "https://servibel.com.br",
+  "image": "https://www.servibel.com.br/icon-512.png",
+  "url": "https://www.servibel.com.br",
   "telephone": "+5531984101104",
   "priceRange": "$$",
   "address": {
