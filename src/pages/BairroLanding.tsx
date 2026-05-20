@@ -187,7 +187,7 @@ const BairroLanding = () => {
     setMeta('og:title', title, true);
     setMeta('og:description', description, true);
     setMeta('og:type', 'website', true);
-    setMeta('og:url', `https://servibel.com.br/${config.slug}`, true);
+    setMeta('og:url', `https://www.servibel.com.br/${config.slug}`, true);
 
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonical) {
@@ -195,7 +195,7 @@ const BairroLanding = () => {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = `https://servibel.com.br/${config.slug}`;
+    canonical.href = `https://www.servibel.com.br/${config.slug}`;
 
     const jsonLd = document.createElement('script');
     jsonLd.type = 'application/ld+json';
@@ -205,7 +205,7 @@ const BairroLanding = () => {
       '@type': 'LocalBusiness',
       name: `SERVIBEL - Assistência Técnica no ${config.bairro}`,
       description,
-      url: `https://servibel.com.br/${config.slug}`,
+      url: `https://www.servibel.com.br/${config.slug}`,
       telephone: '+5531984101104',
       address: { '@type': 'PostalAddress', addressLocality: config.bairro, addressRegion: 'MG', addressCountry: 'BR' },
       areaServed: `${config.bairro}, ${config.regiao}`,

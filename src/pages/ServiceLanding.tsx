@@ -292,7 +292,7 @@ const ServiceLanding = () => {
     setMeta('og:title', config.metaTitle, true);
     setMeta('og:description', config.metaDescription, true);
     setMeta('og:type', 'website', true);
-    setMeta('og:url', `https://servibel.com.br/${config.slug}`, true);
+    setMeta('og:url', `https://www.servibel.com.br/${config.slug}`, true);
 
     let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement;
     if (!canonical) {
@@ -300,7 +300,7 @@ const ServiceLanding = () => {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = `https://servibel.com.br/${config.slug}`;
+    canonical.href = `https://www.servibel.com.br/${config.slug}`;
 
     const jsonLd = document.createElement('script');
     jsonLd.type = 'application/ld+json';
@@ -310,7 +310,7 @@ const ServiceLanding = () => {
       '@type': 'LocalBusiness',
       name: 'SERVIBEL - Assistência Técnica',
       description: config.metaDescription,
-      url: `https://servibel.com.br/${config.slug}`,
+      url: `https://www.servibel.com.br/${config.slug}`,
       telephone: '+5531984101104',
       address: { '@type': 'PostalAddress', addressLocality: config.location || 'Belo Horizonte', addressRegion: 'MG', addressCountry: 'BR' },
       areaServed: config.location || 'Belo Horizonte e Região Metropolitana',
