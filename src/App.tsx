@@ -47,9 +47,9 @@ const App = () => (
             <Route path="/conserto-lava-e-seca-justinopolis" element={<ServiceLanding />} />
             <Route path="/conserto-microondas-justinopolis" element={<ServiceLanding />} />
             <Route path="/conserto-freezer-justinopolis" element={<ServiceLanding />} />
-            <Route path="/conserto-fogao-ribeirao-das-neves" element={<ServiceLanding />} />
-            <Route path="/conserto-secadora-ribeirao-das-neves" element={<ServiceLanding />} />
-            <Route path="/conserto-cooktop-ribeirao-das-neves" element={<ServiceLanding />} />
+            <Route path="/conserto-geladeira-ribeirao-das-neves" element={<ServiceLanding />} />
+            <Route path="/conserto-freezer-ribeirao-das-neves" element={<ServiceLanding />} />
+            <Route path="/conserto-maquina-lavar-ribeirao-das-neves" element={<ServiceLanding />} />
             <Route path="/blog/dicas-limpeza-maquina" element={<BlogDicasLimpezaMaquina />} />
             <Route path="/dicas/geladeira-borracha-vedacao" element={<GeladeiraBorrachaVedacao />} />
             <Route path="/dicas/lava-e-seca-nao-seca" element={<LavaSecaNaoSeca />} />
