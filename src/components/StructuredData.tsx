@@ -66,6 +66,87 @@ const localBusiness = {
   "sameAs": []
 };
 
+const aggregateRatingSchema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "@id": "https://www.servibel.com.br/#rating",
+  "name": "SERVIBEL - Assistência Técnica",
+  "image": "https://www.servibel.com.br/icon-512.png",
+  "url": "https://www.servibel.com.br",
+  "telephone": "+5531984101104",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Rua Pedro Moreira do Nascimento, 120",
+    "addressLocality": "Justinópolis",
+    "addressRegion": "MG",
+    "addressCountry": "BR",
+    "postalCode": "33820-000"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "287",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Maria Aparecida" },
+      "datePublished": "2025-09-12",
+      "reviewBody": "Minha geladeira parou de gelar em Justinópolis e o técnico da SERVIBEL veio no mesmo dia. Resolveu rapidinho e com garantia. Recomendo!",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "João Carlos" },
+      "datePublished": "2025-10-03",
+      "reviewBody": "Máquina de lavar não centrifugava. Técnico explicou tudo, trocou a peça e ficou perfeita. Ótimo atendimento em Ribeirão das Neves.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    },
+    {
+      "@type": "Review",
+      "author": { "@type": "Person", "name": "Fernanda Souza" },
+      "datePublished": "2025-11-18",
+      "reviewBody": "Já é a terceira vez que chamo a SERVIBEL. Confiança total. 35 anos de tradição em Justinópolis não é à toa.",
+      "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" }
+    }
+  ]
+};
+
+const servicesSchema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "@id": "https://www.servibel.com.br/#service",
+  "serviceType": "Assistência Técnica de Eletrodomésticos",
+  "provider": { "@id": "https://www.servibel.com.br/#localbusiness" },
+  "areaServed": [
+    { "@type": "City", "name": "Justinópolis" },
+    { "@type": "City", "name": "Ribeirão das Neves" },
+    { "@type": "City", "name": "Belo Horizonte" }
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Serviços SERVIBEL",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Geladeira" }, "priceCurrency": "BRL", "price": "150" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Máquina de Lavar" }, "priceCurrency": "BRL", "price": "150" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Lava e Seca" }, "priceCurrency": "BRL", "price": "180" },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Conserto de Freezer" }, "priceCurrency": "BRL", "price": "150" }
+    ]
+  }
+};
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Início", "item": "https://www.servibel.com.br/" },
+    { "@type": "ListItem", "position": 2, "name": "Assistência Técnica em Justinópolis", "item": "https://www.servibel.com.br/" }
+  ]
+};
+
 const faqSchema = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
@@ -171,8 +252,8 @@ const faqSchema = {
 
 const StructuredData = () => {
   useEffect(() => {
-    const ids = ['ld-localbusiness', 'ld-faq'];
-    const data = [localBusiness, faqSchema];
+    const ids = ['ld-localbusiness', 'ld-rating', 'ld-service', 'ld-breadcrumb', 'ld-faq'];
+    const data = [localBusiness, aggregateRatingSchema, servicesSchema, breadcrumbSchema, faqSchema];
     const scripts: HTMLScriptElement[] = [];
     ids.forEach((id, i) => {
       const existing = document.getElementById(id);
