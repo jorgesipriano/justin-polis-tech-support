@@ -67,6 +67,16 @@ const ArticleLayout = ({ title, metaTitle, description, category, image, imageAl
       tag.setAttribute('content', content);
     });
 
+    // Canonical per-page (evita "Página alternativa com tag canônica adequada")
+    let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    const previousCanonical = canonical.href;
+    canonical.href = `https://www.servibel.com.br${window.location.pathname}`;
+
     const ld = document.createElement('script');
     ld.type = 'application/ld+json';
     ld.text = JSON.stringify({
@@ -88,6 +98,7 @@ const ArticleLayout = ({ title, metaTitle, description, category, image, imageAl
     return () => {
       created.forEach((t) => t.remove());
       ld.remove();
+      if (canonical) canonical.href = previousCanonical || 'https://www.servibel.com.br/';
     };
   }, [title, metaTitle, description, image]);
 
