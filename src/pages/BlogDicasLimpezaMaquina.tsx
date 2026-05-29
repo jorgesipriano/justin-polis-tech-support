@@ -63,7 +63,7 @@ const BlogDicasLimpezaMaquina = () => {
       canonical.rel = 'canonical';
       document.head.appendChild(canonical);
     }
-    canonical.href = 'https://www.servibel.com.br/blog';
+    canonical.href = 'https://www.servibel.com.br/blog/dicas-limpeza-maquina';
 
     // Article JSON-LD
     const ld = document.createElement('script');
