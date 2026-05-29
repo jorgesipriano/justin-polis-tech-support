@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { ArrowLeft, Phone, Clock, MapPin, Wrench, Shield, Award, Users, CheckCircle, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '@/assets/logo-servibel.jpeg';
@@ -61,6 +62,17 @@ const appliances = [
 ];
 
 const About = () => {
+  useEffect(() => {
+    document.title = 'Como Funciona a SERVIBEL | Assistência Técnica em Justinópolis';
+    const desc = 'Conheça o processo SERVIBEL: 35 anos consertando máquina de lavar, geladeira, freezer e lava e seca em Justinópolis e Ribeirão das Neves.';
+    let meta = document.head.querySelector<HTMLMetaElement>('meta[name="description"]');
+    if (!meta) { meta = document.createElement('meta'); meta.name = 'description'; document.head.appendChild(meta); }
+    meta.content = desc;
+    let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) { canonical = document.createElement('link'); canonical.rel = 'canonical'; document.head.appendChild(canonical); }
+    canonical.href = 'https://www.servibel.com.br/page';
+  }, []);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
