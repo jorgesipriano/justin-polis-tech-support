@@ -57,6 +57,14 @@ const BlogDicasLimpezaMaquina = () => {
       tag.setAttribute('content', content);
     });
 
+    let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = 'https://www.servibel.com.br/blog/dicas-limpeza-maquina';
+
     // Article JSON-LD
     const ld = document.createElement('script');
     ld.type = 'application/ld+json';
