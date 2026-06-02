@@ -17,6 +17,15 @@ const Admin = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = 'Área administrativa | SERVIBEL';
+    let robots = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
+    if (!robots) {
+      robots = document.createElement('meta');
+      robots.name = 'robots';
+      document.head.appendChild(robots);
+    }
+    robots.content = 'noindex, nofollow';
+
     if (!loading && (!user || !isAdmin)) {
       navigate('/admin/login');
     }
