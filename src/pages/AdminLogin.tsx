@@ -18,6 +18,15 @@ const AdminLogin = () => {
   const { toast } = useToast();
 
   useEffect(() => {
+    document.title = 'Login administrativo | SERVIBEL';
+    let robots = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
+    if (!robots) {
+      robots = document.createElement('meta');
+      robots.name = 'robots';
+      document.head.appendChild(robots);
+    }
+    robots.content = 'noindex, nofollow';
+
     if (!loading && user && isAdmin) {
       navigate('/admin');
     }
