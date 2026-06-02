@@ -379,6 +379,34 @@ const ServiceLanding = () => {
       areaServed: config.location || 'Belo Horizonte e Região Metropolitana',
       priceRange: '$$',
       aggregateRating: { '@type': 'AggregateRating', ratingValue: '4.8', reviewCount: '247' },
+      image: `https://www.servibel.com.br${lavaESecaImg}`,
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: '+5531984101104',
+          contactType: 'customer service',
+          areaServed: 'BR',
+          availableLanguage: ['Portuguese'],
+          contactOption: 'TollFree',
+        },
+        {
+          '@type': 'ContactPoint',
+          telephone: '+5531984101104',
+          contactType: 'WhatsApp',
+          areaServed: 'BR',
+          availableLanguage: ['Portuguese'],
+          url: 'https://wa.me/5531984101104',
+        },
+      ],
+      sameAs: [
+        'https://wa.me/5531984101104',
+        'https://www.instagram.com/servibel.assistencia/',
+      ],
+      potentialAction: {
+        '@type': 'CommunicateAction',
+        name: 'Falar no WhatsApp',
+        target: `https://wa.me/5531984101104?text=${encodeURIComponent(config.whatsappMessage)}`,
+      },
     });
     document.head.appendChild(jsonLd);
 
