@@ -519,6 +519,18 @@ const ServiceLanding = () => {
           <p className="text-lg md:text-xl max-w-2xl mx-auto opacity-90 leading-relaxed mb-10">
             {config.heroDescription}
           </p>
+          {(slug === 'reparo-lava-e-seca' || slug === 'limpa-lava-e-seca') && (
+            <div className="max-w-md mx-auto mb-10">
+              <img
+                src={lavaESecaImg}
+                alt="Conserto de lava e seca - SERVIBEL Assistência Técnica em BH, Justinópolis e Ribeirão das Neves"
+                width={1024}
+                height={1024}
+                fetchPriority="high"
+                className="w-full h-auto rounded-2xl shadow-2xl"
+              />
+            </div>
+          )}
           <a
             href={whatsappUrl}
             target="_blank"
