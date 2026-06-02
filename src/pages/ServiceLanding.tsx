@@ -2,6 +2,7 @@ import { ArrowLeft, MessageCircle, MapPin, Clock, Shield, Star, Sparkles, Chevro
 import { Link, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import logo from '@/assets/logo-servibel.jpeg';
+import lavaESecaImg from '@/assets/lava-e-seca.jpg';
 
 interface FAQ {
   question: string;
