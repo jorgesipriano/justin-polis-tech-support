@@ -30,6 +30,10 @@ const AdminLogin = () => {
     if (!loading && user && isAdmin) {
       navigate('/admin');
     }
+
+    return () => {
+      robots.content = 'index, follow, max-image-preview:large, max-snippet:-1';
+    };
   }, [user, isAdmin, loading, navigate]);
 
   const handleSubmit = async (e: React.FormEvent) => {
