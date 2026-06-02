@@ -29,6 +29,10 @@ const Admin = () => {
     if (!loading && (!user || !isAdmin)) {
       navigate('/admin/login');
     }
+
+    return () => {
+      robots.content = 'index, follow, max-image-preview:large, max-snippet:-1';
+    };
   }, [user, isAdmin, loading, navigate]);
 
   const handleSignOut = async () => {
