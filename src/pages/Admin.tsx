@@ -17,9 +17,22 @@ const Admin = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
+    document.title = 'Área administrativa | SERVIBEL';
+    let robots = document.querySelector<HTMLMetaElement>('meta[name="robots"]');
+    if (!robots) {
+      robots = document.createElement('meta');
+      robots.name = 'robots';
+      document.head.appendChild(robots);
+    }
+    robots.content = 'noindex, nofollow';
+
     if (!loading && (!user || !isAdmin)) {
       navigate('/admin/login');
     }
+
+    return () => {
+      robots.content = 'index, follow, max-image-preview:large, max-snippet:-1';
+    };
   }, [user, isAdmin, loading, navigate]);
 
   const handleSignOut = async () => {
