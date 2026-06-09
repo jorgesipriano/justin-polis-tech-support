@@ -18,6 +18,10 @@ import HigienizacaoCrostaOculta from "./pages/dicas/HigienizacaoCrostaOculta";
 import GeladeiraGastandoMuito from "./pages/dicas/GeladeiraGastandoMuito";
 import ErroLavaESeca from "./pages/dicas/ErroLavaESeca";
 import PerigoMicroondas from "./pages/dicas/PerigoMicroondas";
+import SinaisQuebraMaquina from "./pages/dicas/SinaisQuebraMaquina";
+import CicloSecretoLavaSeca from "./pages/dicas/CicloSecretoLavaSeca";
+import MaquinaAndandoSozinha from "./pages/dicas/MaquinaAndandoSozinha";
+import LavaSecaVsSeparadas from "./pages/dicas/LavaSecaVsSeparadas";
 import BairroLanding, { bairroSlugs } from "./pages/BairroLanding";
 import NotFound from "./pages/NotFound";
 
@@ -59,6 +63,10 @@ const App = () => (
             <Route path="/dicas/geladeira-gastando-muito" element={<GeladeiraGastandoMuito />} />
             <Route path="/dicas/erro-lava-e-seca" element={<ErroLavaESeca />} />
             <Route path="/dicas/perigo-microondas" element={<PerigoMicroondas />} />
+            <Route path="/dicas/sinais-quebra-maquina-lavar" element={<SinaisQuebraMaquina />} />
+            <Route path="/dicas/ciclo-secreto-lava-e-seca" element={<CicloSecretoLavaSeca />} />
+            <Route path="/dicas/maquina-lavar-andando-sozinha" element={<MaquinaAndandoSozinha />} />
+            <Route path="/dicas/lava-e-seca-vs-maquina-secadora" element={<LavaSecaVsSeparadas />} />
             {bairroSlugs.map((slug) => (
               <Route key={slug} path={`/${slug}`} element={<BairroLanding />} />
             ))}
