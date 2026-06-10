@@ -26,13 +26,13 @@ const Hero = () => {
             </div>
 
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6 tracking-tight">
-              Assistência Técnica de
-              <span className="block text-accent">Confiança em Justinópolis</span>
+              Conserto de Lava e Seca
+              <span className="block text-accent">Especialista em Justinópolis</span>
               <span className="block">e Região</span>
             </h1>
 
             <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed">
-              Conserto especializado de <strong className="text-accent">Máquina de Lavar, Lava e Seca, Geladeiras e Freezers</strong>. Mais de 35 anos de tradição e garantia total no serviço.
+              Assistência técnica <strong className="text-accent">exclusiva em Lava e Seca</strong> de todas as marcas: LG, Samsung, Electrolux, Brastemp e mais. 35 anos de experiência e garantia total no reparo.
             </p>
 
             {/* Differentiators */}
