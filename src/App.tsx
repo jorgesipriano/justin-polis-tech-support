@@ -22,6 +22,11 @@ import SinaisQuebraMaquina from "./pages/dicas/SinaisQuebraMaquina";
 import CicloSecretoLavaSeca from "./pages/dicas/CicloSecretoLavaSeca";
 import MaquinaAndandoSozinha from "./pages/dicas/MaquinaAndandoSozinha";
 import LavaSecaVsSeparadas from "./pages/dicas/LavaSecaVsSeparadas";
+import LavaSecaErroE1 from "./pages/dicas/LavaSecaErroE1";
+import LavaSecaMofoBorracha from "./pages/dicas/LavaSecaMofoBorracha";
+import LavaSecaConsumoEnergia from "./pages/dicas/LavaSecaConsumoEnergia";
+import LavaSecaFiltroFiapos from "./pages/dicas/LavaSecaFiltroFiapos";
+import LavaSecaBarulhoCentrifuga from "./pages/dicas/LavaSecaBarulhoCentrifuga";
 import BairroLanding, { bairroSlugs } from "./pages/BairroLanding";
 import NotFound from "./pages/NotFound";
 
@@ -67,6 +72,11 @@ const App = () => (
             <Route path="/dicas/ciclo-secreto-lava-e-seca" element={<CicloSecretoLavaSeca />} />
             <Route path="/dicas/maquina-lavar-andando-sozinha" element={<MaquinaAndandoSozinha />} />
             <Route path="/dicas/lava-e-seca-vs-maquina-secadora" element={<LavaSecaVsSeparadas />} />
+            <Route path="/dicas/lava-e-seca-erro-e1" element={<LavaSecaErroE1 />} />
+            <Route path="/dicas/lava-e-seca-mofo-borracha" element={<LavaSecaMofoBorracha />} />
+            <Route path="/dicas/lava-e-seca-consumo-energia" element={<LavaSecaConsumoEnergia />} />
+            <Route path="/dicas/lava-e-seca-filtro-fiapos" element={<LavaSecaFiltroFiapos />} />
+            <Route path="/dicas/lava-e-seca-barulho-centrifuga" element={<LavaSecaBarulhoCentrifuga />} />
             {bairroSlugs.map((slug) => (
               <Route key={slug} path={`/${slug}`} element={<BairroLanding />} />
             ))}
