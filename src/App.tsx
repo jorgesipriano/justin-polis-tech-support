@@ -27,6 +27,10 @@ import LavaSecaMofoBorracha from "./pages/dicas/LavaSecaMofoBorracha";
 import LavaSecaConsumoEnergia from "./pages/dicas/LavaSecaConsumoEnergia";
 import LavaSecaFiltroFiapos from "./pages/dicas/LavaSecaFiltroFiapos";
 import LavaSecaBarulhoCentrifuga from "./pages/dicas/LavaSecaBarulhoCentrifuga";
+import GeladeiraBarulho from "./pages/dicas/GeladeiraBarulho";
+import GeladeiraNaoGela from "./pages/dicas/GeladeiraNaoGela";
+import FreezerGeloExcessivo from "./pages/dicas/FreezerGeloExcessivo";
+import MaquinaCheiroRuim from "./pages/dicas/MaquinaCheiroRuim";
 import BairroLanding, { bairroSlugs } from "./pages/BairroLanding";
 import NotFound from "./pages/NotFound";
 
@@ -77,6 +81,10 @@ const App = () => (
             <Route path="/dicas/lava-e-seca-consumo-energia" element={<LavaSecaConsumoEnergia />} />
             <Route path="/dicas/lava-e-seca-filtro-fiapos" element={<LavaSecaFiltroFiapos />} />
             <Route path="/dicas/lava-e-seca-barulho-centrifuga" element={<LavaSecaBarulhoCentrifuga />} />
+            <Route path="/dicas/geladeira-fazendo-barulho" element={<GeladeiraBarulho />} />
+            <Route path="/dicas/geladeira-nao-gela-freezer-congela" element={<GeladeiraNaoGela />} />
+            <Route path="/dicas/freezer-gelo-excessivo" element={<FreezerGeloExcessivo />} />
+            <Route path="/dicas/maquina-lavar-cheiro-ruim" element={<MaquinaCheiroRuim />} />
             {bairroSlugs.map((slug) => (
               <Route key={slug} path={`/${slug}`} element={<BairroLanding />} />
             ))}
