@@ -19,7 +19,7 @@ const Page = () => (
     <h2 className="text-2xl md:text-3xl font-bold mt-10 mb-4">Onde a sujeira se esconde</h2>
     <ul className="space-y-3">
       <li>• Entre o cesto interno e a cuba externa (você nunca vê)</li>
-      <li>• Na gaveta de sabão e no duto que leja até o tambor</li>
+      <li>• Na gaveta de sabão e no duto que leva até o tambor</li>
       <li>• Na borracha de vedação e no filtro da bomba</li>
     </ul>
 
