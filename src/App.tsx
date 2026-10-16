@@ -31,6 +31,7 @@ import GeladeiraBarulho from "./pages/dicas/GeladeiraBarulho";
 import GeladeiraNaoGela from "./pages/dicas/GeladeiraNaoGela";
 import FreezerGeloExcessivo from "./pages/dicas/FreezerGeloExcessivo";
 import MaquinaCheiroRuim from "./pages/dicas/MaquinaCheiroRuim";
+import LavaSecaMideaReparo from "./pages/dicas/LavaSecaMideaReparo";
 import BairroLanding, { bairroSlugs } from "./pages/BairroLanding";
 import NotFound from "./pages/NotFound";
 
