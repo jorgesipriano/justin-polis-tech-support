@@ -31,6 +31,7 @@ import GeladeiraBarulho from "./pages/dicas/GeladeiraBarulho";
 import GeladeiraNaoGela from "./pages/dicas/GeladeiraNaoGela";
 import FreezerGeloExcessivo from "./pages/dicas/FreezerGeloExcessivo";
 import MaquinaCheiroRuim from "./pages/dicas/MaquinaCheiroRuim";
+import LavaSecaMideaReparo from "./pages/dicas/LavaSecaMideaReparo";
 import BairroLanding, { bairroSlugs } from "./pages/BairroLanding";
 import NotFound from "./pages/NotFound";
 
@@ -84,7 +85,8 @@ const App = () => (
             <Route path="/dicas/geladeira-fazendo-barulho" element={<GeladeiraBarulho />} />
             <Route path="/dicas/geladeira-nao-gela-freezer-congela" element={<GeladeiraNaoGela />} />
             <Route path="/dicas/freezer-gelo-excessivo" element={<FreezerGeloExcessivo />} />
-            <Route path="/dicas/maquina-lavar-cheiro-ruim" element={<MaquinaCheiroRuim />} />
+<Route path="/dicas/maquina-lavar-cheiro-ruim" element={<MaquinaCheiroRuim />} />
+            <Route path="/dicas/reparo-lava-e-seca-midea" element={<LavaSecaMideaReparo />} />
             {bairroSlugs.map((slug) => (
               <Route key={slug} path={`/${slug}`} element={<BairroLanding />} />
             ))}
