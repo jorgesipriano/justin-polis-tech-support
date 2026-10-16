@@ -31,9 +31,17 @@ const Hero = () => {
               <span className="block">e Região</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed">
+            <p className="text-lg md:text-xl text-primary-foreground/90 mb-6 leading-relaxed">
               Conserto especializado de <strong className="text-accent">Máquina de Lavar, Lava e Seca, Geladeiras e Freezers</strong>. Mais de 35 anos de tradição e garantia total no serviço.
             </p>
+
+            {/* Exclusive repair highlight */}
+            <div className="flex items-start gap-3 bg-accent/15 border border-accent/50 rounded-xl px-4 py-3 mb-8">
+              <Star className="w-5 h-5 text-accent shrink-0 mt-0.5" />
+              <p className="text-sm md:text-base font-semibold leading-relaxed text-primary-foreground">
+                Único na região com <span className="text-accent">reparo de placa eletrônica em lava e seca Midea</span> — conserte em vez de trocar a máquina.
+              </p>
+            </div>
 
             {/* Differentiators */}
             <div className="grid grid-cols-3 gap-3 md:gap-4 mb-8">

@@ -134,6 +134,7 @@ const SeoServices = () => {
           <p>
             Se você está procurando <strong>arrumar geladeira</strong>, <strong>consertar máquina de lavar</strong>, <strong>reparar lava e seca</strong>, <strong>arrumar freezer</strong> ou <strong>consertar microondas</strong> em BH, 
             a SERVIBEL é a escolha certa. Atendemos todas as marcas: <strong>Brastemp</strong>, <strong>Electrolux</strong>, <strong>LG</strong>, <strong>Samsung</strong>, <strong>Consul</strong>, <strong>Panasonic</strong>, <strong>Metalfrio</strong> e muito mais.
+            Somos a única assistência da região que faz <strong>reparo de placa eletrônica em lava e seca Midea</strong> — consertando a placa em vez de trocar a máquina inteira.
           </p>
           <p>
             <strong>Conserto de máquina de lavar em Justinópolis</strong>, <strong>reparo de máquina de lavar em Justinópolis</strong>,
