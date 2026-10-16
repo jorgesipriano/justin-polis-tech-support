@@ -21,7 +21,7 @@ const Page = () => (
       <li><strong>Pés desnivelados:</strong> 70% dos casos. A máquina precisa estar 100% no esquadro.</li>
       <li><strong>Excesso de carga:</strong> roupa pesada (cobertor, edredom) desbalanceia o tambor.</li>
       <li><strong>Amortecedores gastos:</strong> peça interna que segura o tanque — vida útil de 6 a 8 anos.</li>
-      <li><strong>Contrapesos soltos:</strong> blocos de concreto fixados ao tanque. Quando soltam, a máquina vira “liquidificador”.</li>
+      <li><strong>Contrapesos soltos:</strong> blocos de concreto fixados ao tanque. Quando soltam, a vibração fica violenta.</li>
     </ol>
 
     <h2 className="text-2xl md:text-3xl font-bold mt-10 mb-4">O risco escondido</h2>
