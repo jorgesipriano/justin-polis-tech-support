@@ -12,6 +12,7 @@ import TopReminder from '@/components/TopReminder';
 import FAQ from '@/components/FAQ';
 import MobileActionBar from '@/components/MobileActionBar';
 import StructuredData from '@/components/StructuredData';
+import ArCondicionadoNovidade from '@/components/ArCondicionadoNovidade';
 
 const Index = () => {
   return (
@@ -20,6 +21,7 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
+        <ArCondicionadoNovidade />
         <Services />
         <SeoServices />
         <Gallery />
